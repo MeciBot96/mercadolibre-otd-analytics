@@ -1,0 +1,133 @@
+{
+    "name": "OTD Promise Calibration & Agentic Alerts",
+    "nodes": [
+        {
+            "parameters": {
+                "httpMethod": "POST",
+                "path": "shipment-checkout",
+                "responseMode": "responseNode",
+                "options": {}
+            },
+            "name": "Webhook Checkout",
+            "type": "n8n-nodes-base.webhook",
+            "typeVersion": 1,
+            "position": [240, 300],
+            "webhookId": "shipment-checkout"
+        },
+        {
+            "parameters": {
+                "projectId": "YOUR_GCP_PROJECT",
+                "sqlIngestType": "json",
+                "options": {},
+                "queryParameters": {
+                    "parameters": [
+                        {"name": "site_id", "value": "={{$json.destino_site_id}}"}
+                    ]
+                },
+                "query": "SELECT occ_service_center_pct, delivery_success_pct\nFROM `YOUR_GCP_PROJECT.logistics_otd.daily_kpi`\nWHERE site_id = @site_id\nORDER BY log_date DESC LIMIT 1"
+            },
+            "name": "BigQuery - Get Latest KPI",
+            "type": "n8n-nodes-base.googleBigQuery",
+            "typeVersion": 1,
+            "position": [460, 300]
+        },
+        {
+            "parameters": {
+                "functionCode": "const checkout = $('Webhook Checkout').first().json;\nconst kpi     = $('BigQuery - Get Latest KPI').first().json;\nconst dt = new Date(checkout.created_date);\nreturn [{ json: {\n    destino_site_id:        checkout.destino_site_id_encoded,\n    destino_region:         checkout.destino_region_encoded,\n    create_day_of_week:     dt.getUTCDay(),\n    create_hour:            dt.getUTCHours(),\n    occ_service_center_pct: kpi.occ_service_center_pct,\n    delivery_success_pct:   kpi.delivery_success_pct,\n    _raw_site:              checkout.destino_site_id\n}}];"
+            },
+            "name": "Build Feature Vector",
+            "type": "n8n-nodes-base.function",
+            "typeVersion": 1,
+            "position": [680, 300]
+        },
+        {
+            "parameters": {
+                "url": "http://otd-predictor:8000/predict",
+                "method": "POST",
+                "jsonParameters": true,
+                "options": {},
+                "bodyParametersJson": "={{ JSON.stringify($json) }}"
+            },
+            "name": "Call XGBoost Microservice",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 3,
+            "position": [900, 300]
+        },
+        {
+            "parameters": {
+                "conditions": {
+                    "number": [
+                        {
+                            "value1": "={{$('Build Feature Vector').first().json.occ_service_center_pct}}",
+                            "operation": "smaller",
+                            "value2": 80
+                        }
+                    ]
+                }
+            },
+            "name": "IF OCC Below 80%",
+            "type": "n8n-nodes-base.if",
+            "typeVersion": 1,
+            "position": [1120, 300]
+        },
+        {
+            "parameters": {
+                "channel": "#logistics-control-tower",
+                "text": "=🚨 *ALERTA OPERATIVA* 🚨\nSC *{{$('Build Feature Vector').first().json._raw_site}}* operando con OCC {{$('Build Feature Vector').first().json.occ_service_center_pct}}% (umbral crítico: 80%).\nPromesa sugerida ampliada a {{$json.promesa_sugerida_h}}h.\n_Recomendación: activar desvío a 3PL backup._",
+                "otherOptions": {}
+            },
+            "name": "Slack Alert - Control Tower",
+            "type": "n8n-nodes-base.slack",
+            "typeVersion": 1,
+            "position": [1340, 220]
+        },
+        {
+            "parameters": {
+                "functionCode": "const pred = $('Call XGBoost Microservice').first().json;\nconst feat = $('Build Feature Vector').first().json;\nreturn [{ json: {\n    promesa_final_h: pred.promesa_sugerida_h,\n    t_predicho_h:    pred.t_predicho_h,\n    buffer_h:        pred.buffer_aplicado_h,\n    confianza:       pred.confianza,\n    alerta_activa:   feat.occ_service_center_pct < 80,\n    timestamp:       new Date().toISOString()\n}}];"
+            },
+            "name": "Compose Response",
+            "type": "n8n-nodes-base.function",
+            "typeVersion": 1,
+            "position": [1340, 380]
+        },
+        {
+            "parameters": {
+                "operation": "append",
+                "datasetId": "logistics_otd",
+                "tableId": "predictions_log",
+                "options": {}
+            },
+            "name": "Log Prediction BigQuery",
+            "type": "n8n-nodes-base.googleBigQuery",
+            "typeVersion": 1,
+            "position": [1560, 380]
+        },
+        {
+            "parameters": {
+                "respondWith": "json",
+                "responseBody": "={{ $('Compose Response').first().json }}"
+            },
+            "name": "Respond to Checkout",
+            "type": "n8n-nodes-base.respondToWebhook",
+            "typeVersion": 1,
+            "position": [1780, 380]
+        }
+    ],
+    "connections": {
+        "Webhook Checkout":          {"main": [[{"node": "BigQuery - Get Latest KPI", "type": "main", "index": 0}]]},
+        "BigQuery - Get Latest KPI": {"main": [[{"node": "Build Feature Vector",      "type": "main", "index": 0}]]},
+        "Build Feature Vector":      {"main": [[{"node": "Call XGBoost Microservice", "type": "main", "index": 0}]]},
+        "Call XGBoost Microservice": {"main": [[{"node": "IF OCC Below 80%",          "type": "main", "index": 0}]]},
+        "IF OCC Below 80%": {
+            "main": [
+                [{"node": "Slack Alert - Control Tower", "type": "main", "index": 0}, {"node": "Compose Response", "type": "main", "index": 0}],
+                [{"node": "Compose Response", "type": "main", "index": 0}]
+            ]
+        },
+        "Compose Response":     {"main": [[{"node": "Log Prediction BigQuery", "type": "main", "index": 0}]]},
+        "Log Prediction BigQuery": {"main": [[{"node": "Respond to Checkout",  "type": "main", "index": 0}]]}
+    },
+    "active": false,
+    "settings": {"executionOrder": "v1"},
+    "versionId": "1.0.0"
+}

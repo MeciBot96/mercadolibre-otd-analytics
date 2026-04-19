@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>On-Time Delivery Analytics · Mercado Libre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/styles.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="hero">
+    <div class="container">
+        <div class="hero-row">
+            <span class="ml-logo"><span class="ml-logo-mark"></span> MERCADO LIBRE</span>
+            <span>LOGISTICS ANALYTICS · Q1 2026</span>
+            <span>CASO PRÁCTICO · SR. DATA ANALYST</span>
+        </div>
+    </div>
+</header>
+
+<!-- HERO TITLE -->
+<div class="hero-title">
+    <div class="container">
+        <span class="hero-label">Executive Brief</span>
+        <h1>
+            El problema no es<br>
+            <span class="italic">que lleguemos tarde.</span><br>
+            Es que <span class="highlight">prometemos</span> de más.
+        </h1>
+        <p>Diagnóstico de <strong id="kpi-total-envios">3,203</strong> envíos desde el Fulfillment Center <strong>MXCD10 (Cuautitlán Izcalli)</strong> hacia 3 Service Centers: CDMX, Monterrey y Mérida. Análisis de causa raíz, cuantificación del costo de sobreestimar la promesa, y propuesta de un sistema XGBoost + n8n para calibrar entregas dinámicamente.</p>
+        <div class="hero-meta">
+            <div class="hero-meta-item"><span class="label">Periodo</span><span class="val">Ene–Mar 2026</span></div>
+            <div class="hero-meta-item"><span class="label">FC Origen</span><span class="val">Cuautitlán Izcalli</span></div>
+            <div class="hero-meta-item"><span class="label">Destinos</span><span class="val">3 Service Centers</span></div>
+            <div class="hero-meta-item"><span class="label">Stack</span><span class="val">Python · BigQuery · XGBoost · n8n</span></div>
+        </div>
+    </div>
+</div>
+
+<!-- KPI BAR -->
+<div class="kpi-bar">
+    <div class="kpi critical">
+        <div class="label">Entregas Early (falla financiera)</div>
+        <div class="num"><span id="kpi-early">—</span><span class="unit">%</span></div>
+        <div class="desc">8 de cada 10 envíos llegan antes de lo prometido. Señal clara de promesa mal calibrada.</div>
+    </div>
+    <div class="kpi warn">
+        <div class="label">Adelanto promedio</div>
+        <div class="num"><span id="kpi-adelanto">—</span><span class="unit">d</span></div>
+        <div class="desc">Días de margen desperdiciado.</div>
+    </div>
+    <div class="kpi">
+        <div class="label">On-Time</div>
+        <div class="num"><span id="kpi-ontime">—</span><span class="unit">%</span></div>
+        <div class="desc">Objetivo tras implementar ML: ≥ 65%.</div>
+    </div>
+    <div class="kpi">
+        <div class="label">Delayed</div>
+        <div class="num"><span id="kpi-delayed">—</span><span class="unit">%</span></div>
+        <div class="desc">Concentrado en SC CDMX.</div>
+    </div>
+</div>
+
+<!-- ========= 01 DIAGNÓSTICO ========= -->
+<section>
+    <div class="container">
+        <div class="section-head">
+            <div class="section-num">01 / Diagnóstico</div>
+            <h2>Dónde <span class="italic">se gastan</span> las horas en cada envío.</h2>
+            <p>Descomponemos cada envío en sus 3 etapas operativas: preparación en el Fulfillment Center de Cuautitlán, linehaul en carretera, y última milla en el Service Center local. Comparamos contra la promesa mostrada al cliente.</p>
+        </div>
+
+        <div class="stages-hdr">
+            <div>DESTINO</div>
+            <div>COMPOSICIÓN DEL TIEMPO REAL (HORAS)</div>
+            <div>TOTAL</div>
+        </div>
+        <div id="stages-container"></div>
+
+        <div class="legend">
+            <div class="legend-item"><span class="legend-sq" style="background:var(--ml-blue-light)"></span>Preparación (FC Cuautitlán)</div>
+            <div class="legend-item"><span class="legend-sq" style="background:var(--ml-blue)"></span>Linehaul (carretera)</div>
+            <div class="legend-item"><span class="legend-sq" style="background:var(--ml-yellow)"></span>Última milla (SC)</div>
+            <div class="legend-item"><span class="legend-sq" style="background:var(--danger)"></span>Promesa actual</div>
+        </div>
+
+        <div class="finding">
+            La <strong>promesa a Mérida</strong> es de <strong>106 h</strong>, pero el <strong>p90 real</strong> es de apenas <strong>84 h</strong>. Estamos regalando <strong>22 h</strong> que podrían traducirse en más ventas al exponer una promesa más agresiva en el sitio web.
+        </div>
+
+        <div class="grid-2" style="margin-top:48px">
+            <div class="card">
+                <h3>Desglose por destino</h3>
+                <h4>Tiempo real vs. promesa</h4>
+                <table class="data">
+                    <thead>
+                        <tr>
+                            <th>Service Center</th>
+                            <th>Envíos</th>
+                            <th>Real µ</th>
+                            <th>P90</th>
+                            <th>Promesa</th>
+                            <th>% Early</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-destinos"></tbody>
+                </table>
+            </div>
+            <div class="card">
+                <h3>Matriz diagnóstica</h3>
+                <h4>Promesa vs tiempo real (y = x es entrega perfecta)</h4>
+                <div class="chart-wrap tall"><canvas id="chartScatter"></canvas></div>
+                <p style="margin-top:16px">La línea diagonal representa el estado ideal On-Time. La masa de puntos por debajo evidencia el exceso de entregas Early.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========= 02 CAUSA RAÍZ ========= -->
+<section>
+    <div class="container">
+        <div class="section-head">
+            <div class="section-num">02 / Causa raíz</div>
+            <h2>El cuello de botella <span class="italic">no es operativo.</span></h2>
+            <p>Hipótesis inicial: los KPIs operativos (OCC y Delivery Success) explican los retrasos. Los datos dicen lo contrario — la promesa está descalibrada de origen por ruta.</p>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <h3>Status por destino</h3>
+                <h4>Distribución porcentual</h4>
+                <div class="chart-wrap"><canvas id="chartCorr"></canvas></div>
+                <p style="margin-top:16px">SC CDMX concentra los Delayed (12.3%) pero también tiene el mejor % On-Time. Mérida y Monterrey viven en sobreestimación crónica.</p>
+            </div>
+            <div class="card">
+                <h3>Tendencia semanal</h3>
+                <h4>Evolución del % Early / On-Time / Delayed</h4>
+                <div class="chart-wrap"><canvas id="chartTrend"></canvas></div>
+                <p style="margin-top:16px">Patrón estable durante el trimestre: el problema es estructural, no coyuntural.</p>
+            </div>
+        </div>
+
+        <div class="grid-2" style="margin-top:32px">
+            <div class="card">
+                <h3>Variabilidad por etapa</h3>
+                <h4>Distribución de tiempos (P5 · P25 · P50 · P75 · P95)</h4>
+                <div class="chart-wrap xl"><canvas id="chartBoxplots"></canvas></div>
+                <p style="margin-top:16px">La última milla concentra la máxima variabilidad en los 3 SCs. Preparación y linehaul son comparativamente estables.</p>
+            </div>
+            <div class="card">
+                <h3>Mapa topológico de fricción</h3>
+                <h4>OCC por SC y día (rojo = saturación crítica)</h4>
+                <div class="chart-wrap xl"><canvas id="chartHeatmap"></canvas></div>
+                <p style="margin-top:16px">El tamaño del punto es proporcional al volumen diario. Los puntos rojos (OCC &lt; 80%) marcan días de estrés operativo.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========= 02.5 FECHAS DOBLES ========= -->
+<section id="fechas-dobles">
+    <div class="container">
+        <div class="section-head">
+            <div class="section-num">02.5 / Deep Dive</div>
+            <h2>Analisis de fechas dobles <span class="italic">2/2 y 3/3</span></h2>
+            <p>Las fechas "dobles" suelen concentrar campañas promocionales en el comercio digital latinoamericano. Aislamos estos dos días para verificar si el comportamiento difiere del resto del trimestre.</p>
+        </div>
+
+        <div class="grid-3" style="margin-bottom:32px">
+            <div class="card">
+                <h3>Envíos analizados</h3>
+                <div style="font-size:56px; font-weight:900; letter-spacing:-0.03em; line-height:1; margin:12px 0; color:var(--ml-blue)"><span id="d-total">—</span></div>
+                <p>02/02 (lunes) + 03/03 (martes). Volumen ligeramente por debajo del promedio del trimestre.</p>
+            </div>
+            <div class="card">
+                <h3>% Delayed</h3>
+                <div style="font-size:56px; font-weight:900; letter-spacing:-0.03em; line-height:1; margin:12px 0; color:var(--danger)"><span id="d-delayed">—</span><span style="font-size:20px; color:var(--ink-dim); font-weight:400">%</span></div>
+                <p>Aproximadamente 2× el promedio del trimestre. El problema se amplifica en CDMX.</p>
+            </div>
+            <div class="card">
+                <h3>Última milla</h3>
+                <div style="font-size:56px; font-weight:900; letter-spacing:-0.03em; line-height:1; margin:12px 0; color:var(--warn)"><span id="d-um">—</span><span style="font-size:20px; color:var(--ink-dim); font-weight:400">%</span></div>
+                <p>Incremento en tiempo de distribución local. El cuello está en el SC, no en carretera.</p>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <h3>Comparación de status</h3>
+                <h4>Fechas dobles vs resto del Q1</h4>
+                <div class="chart-wrap"><canvas id="chartDobles"></canvas></div>
+                <p style="margin-top:16px">El porcentaje Delayed se duplica en fechas dobles mientras Early cae — la promesa se aprieta cuando los SC están saturados.</p>
+            </div>
+            <div class="card">
+                <h3>Tiempos por etapa</h3>
+                <h4>Horas promedio por fase operativa</h4>
+                <div class="chart-wrap"><canvas id="chartDoblesEtapas"></canvas></div>
+                <p style="margin-top:16px">Preparación es casi idéntica, linehaul sube levemente, pero la <strong>última milla se dispara</strong>. La congestión se concentra en el Service Center.</p>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top:32px">
+            <h3>Granularidad</h3>
+            <h4>Detalle por fecha y destino</h4>
+            <table class="data">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>SC</th>
+                        <th>Envíos</th>
+                        <th>Última milla</th>
+                        <th>% Early</th>
+                        <th>% Delayed</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-dobles"></tbody>
+            </table>
+        </div>
+
+        <div class="finding">
+            En fechas dobles, <strong>SC CDMX</strong> opera cerca del colapso: el 50% de envíos llegan Delayed el 03/03 con una última milla de 42 h (casi 2× el promedio). El problema se concentra en 1 de 3 SCs en 2 días específicos — <strong>caso claro para el agente de alertas de n8n.</strong>
+        </div>
+    </div>
+</section>
+
+<!-- ========= 03 SOLUCIÓN ML ========= -->
+<section>
+    <div class="container">
+        <div class="section-head">
+            <div class="section-num">03 / Solución</div>
+            <h2>XGBoost + n8n: promesa dinámica <span class="italic">en tiempo real.</span></h2>
+            <p>Reemplazamos la promesa estática por una predicción agresiva calibrada con XGBoost y orquestada por n8n. Cada checkout dispara un ciclo de respuesta autonómica que predice, aplica colchón asimétrico, y alerta si detecta saturación.</p>
+        </div>
+
+        <div class="flow">
+            <div class="flow-step">
+                <div class="flow-num">01 · Webhook</div>
+                <h5>Checkout intercept</h5>
+                <p>n8n recibe el evento de compra antes de confirmarse al cliente y captura el contexto.</p>
+                <div class="tools">n8n Webhook</div>
+            </div>
+            <div class="flow-step">
+                <div class="flow-num">02 · Feature Store</div>
+                <h5>Ensamblaje de vector</h5>
+                <p>Pulls último KPI del SC destino desde BigQuery + features derivadas del timestamp.</p>
+                <div class="tools">BigQuery</div>
+            </div>
+            <div class="flow-step">
+                <div class="flow-num">03 · Modelo</div>
+                <h5>XGBoost Regressor</h5>
+                <p>Microservicio FastAPI retorna t_predicho + promesa sugerida con colchón de 2σ.</p>
+                <div class="tools">Python · XGBoost · FastAPI</div>
+            </div>
+            <div class="flow-step">
+                <div class="flow-num">04 · Alerta</div>
+                <h5>Agente autónomo</h5>
+                <p>Si OCC &lt; 80% del SC destino, n8n alerta a la torre de control en Slack.</p>
+                <div class="tools">n8n IF · Slack</div>
+            </div>
+            <div class="flow-step">
+                <div class="flow-num">05 · Feedback</div>
+                <h5>Aprendizaje continuo</h5>
+                <p>Cada predicción se persiste en BigQuery para reentrenamiento mensual del modelo.</p>
+                <div class="tools">BigQuery · Airflow</div>
+            </div>
+        </div>
+
+        <div class="grid-2" style="margin-top:48px">
+            <div class="card">
+                <h3>XGBoost</h3>
+                <h4>Feature importance del modelo entrenado</h4>
+                <div class="chart-wrap tall"><canvas id="chartFI"></canvas></div>
+                <p style="margin-top:16px">Las features más predictivas son el destino y los KPIs operativos del SC. Confirma que la heurística estática actual ignora señales operativas valiosas.</p>
+            </div>
+            <div class="card">
+                <h3>Métricas del modelo</h3>
+                <h4>XGBoost Regressor · 6 features del Excel</h4>
+                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:24px; margin-bottom:24px">
+                    <div>
+                        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--ml-blue); letter-spacing:.12em; text-transform:uppercase; font-weight:700;">MAE</div>
+                        <div style="font-size:56px; font-weight:900; letter-spacing:-0.03em; color:var(--ml-blue)"><span id="ml-mae">—</span><span style="font-size:18px; color:var(--ink-dim); font-weight:400">h</span></div>
+                        <div style="font-size:13px; color:var(--ink-2)">Error medio absoluto al predecir el tiempo total de entrega.</div>
+                    </div>
+                    <div>
+                        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--ml-blue); letter-spacing:.12em; text-transform:uppercase; font-weight:700;">RMSE</div>
+                        <div style="font-size:56px; font-weight:900; letter-spacing:-0.03em; color:var(--ml-blue)"><span id="ml-rmse">—</span><span style="font-size:18px; color:var(--ink-dim); font-weight:400">h</span></div>
+                        <div style="font-size:13px; color:var(--ink-2)">Penaliza más errores grandes, útil para monitorear outliers logísticos.</div>
+                    </div>
+                </div>
+                <div style="padding-top:20px; border-top: 1px solid var(--rule)">
+                    <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--ml-blue); letter-spacing:.12em; text-transform:uppercase; font-weight:700;">BUFFER ASIMÉTRICO (2σ)</div>
+                    <div style="font-size:40px; font-weight:900; color:var(--ml-blue); margin:8px 0"><span id="ml-buffer">—</span> h</div>
+                    <p style="font-size:13px; color:var(--ink-2)">Colchón aplicado por n8n antes de exponer la promesa al cliente. Garantiza ≥95% de confianza en el cumplimiento mientras mantiene promesas más agresivas que las actuales.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========= 04 ROADMAP ========= -->
+<section>
+    <div class="container">
+        <div class="section-head">
+            <div class="section-num">04 / Roadmap</div>
+            <h2>Tres movimientos, <span class="italic">en orden de impacto.</span></h2>
+        </div>
+
+        <div class="recs">
+            <div class="rec">
+                <div class="rec-tag">P1 · QUICK WIN · 2 SEMANAS</div>
+                <h5>Recalibrar promesa al P90 del histórico</h5>
+                <p>Sin ML: reemplazar la promesa estática por el percentil 90 del tiempo real por destino, calculado sobre los últimos 90 días en BigQuery. Mérida baja de 106 h a 84 h, Monterrey de 82 h a 76 h.</p>
+                <div class="impact"><span class="k">IMPACTO ·</span> <span class="v">% On-Time ≥ 70%</span></div>
+            </div>
+            <div class="rec p2">
+                <div class="rec-tag">P2 · MEDIUM · 6–8 SEMANAS</div>
+                <h5>Desplegar XGBoost + n8n en producción</h5>
+                <p>Microservicio FastAPI con el modelo entrenado + workflow n8n integrado al checkout. A/B test contra la recalibración P90. Buffer 2σ garantiza 95% de confianza.</p>
+                <div class="impact"><span class="k">IMPACTO ·</span> <span class="v">Ventas por "envío al día siguiente" +X%</span></div>
+            </div>
+            <div class="rec p3">
+                <div class="rec-tag">P3 · LONG · 3–6 MESES</div>
+                <h5>Aprendizaje continuo + desvío a 3PL</h5>
+                <p>Reentrenamiento mensual orquestado por Airflow contra la tabla de predicciones. Agente n8n extendido con capacidad de reconfigurar routing labels y derivar cargas a proveedores logísticos externos ante saturación detectada.</p>
+                <div class="impact"><span class="k">IMPACTO ·</span> <span class="v">Delayed &lt; 3% · OTIF &gt; 92%</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <span>ISAAC · SR. DATA ANALYST CANDIDATE</span>
+        <span>XGBOOST · BIGQUERY · N8N</span>
+        <span>MERCADO LIBRE MÉXICO · 2026</span>
+    </div>
+</footer>
+
+<script src="./js/app.js"></script>
+</body>
+</html>

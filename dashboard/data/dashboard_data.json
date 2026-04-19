@@ -1,0 +1,7032 @@
+{
+  "kpis": {
+    "total_envios": 3203,
+    "pct_early": 81.7,
+    "pct_ontime": 10.0,
+    "pct_delayed": 8.2,
+    "adelanto_medio_h": 48.2,
+    "mae": 14.2,
+    "rmse": 20.18,
+    "r2": -0.031,
+    "buffer_2sigma": 40.3
+  },
+  "por_destino": [
+    {
+      "site_id": "SMT01",
+      "nombre": "SC Monterrey",
+      "region": "Norte",
+      "envios": 1075,
+      "t_preparacion": 8.0,
+      "t_linehaul": 13.9,
+      "t_ultima_milla": 21.6,
+      "t_total_real": 43.5,
+      "t_promesa": 82.3,
+      "p90_real": 75.9,
+      "pct_early": 85.1,
+      "pct_ontime": 6.4,
+      "pct_delayed": 8.5
+    },
+    {
+      "site_id": "SME03",
+      "nombre": "SC Merida",
+      "region": "Sur",
+      "envios": 1074,
+      "t_preparacion": 7.9,
+      "t_linehaul": 23.9,
+      "t_ultima_milla": 20.9,
+      "t_total_real": 52.7,
+      "t_promesa": 105.9,
+      "p90_real": 83.6,
+      "pct_early": 89.7,
+      "pct_ontime": 6.3,
+      "pct_delayed": 4.0
+    },
+    {
+      "site_id": "SMX11",
+      "nombre": "SC CDMX",
+      "region": "Centro",
+      "envios": 1054,
+      "t_preparacion": 8.0,
+      "t_linehaul": 2.5,
+      "t_ultima_milla": 21.9,
+      "t_total_real": 32.4,
+      "t_promesa": 58.4,
+      "p90_real": 65.9,
+      "pct_early": 70.2,
+      "pct_ontime": 17.5,
+      "pct_delayed": 12.3
+    }
+  ],
+  "tendencia": [
+    {
+      "semana": "Dec 29",
+      "Early": 84.3,
+      "OnTime": 8.2,
+      "Delayed": 7.5
+    },
+    {
+      "semana": "Jan 05",
+      "Early": 84.5,
+      "OnTime": 8.0,
+      "Delayed": 7.6
+    },
+    {
+      "semana": "Jan 12",
+      "Early": 79.3,
+      "OnTime": 10.0,
+      "Delayed": 10.7
+    },
+    {
+      "semana": "Jan 19",
+      "Early": 83.8,
+      "OnTime": 6.4,
+      "Delayed": 9.8
+    },
+    {
+      "semana": "Jan 26",
+      "Early": 75.5,
+      "OnTime": 15.2,
+      "Delayed": 9.3
+    },
+    {
+      "semana": "Feb 02",
+      "Early": 79.4,
+      "OnTime": 10.3,
+      "Delayed": 10.3
+    },
+    {
+      "semana": "Feb 09",
+      "Early": 80.9,
+      "OnTime": 10.4,
+      "Delayed": 8.7
+    },
+    {
+      "semana": "Feb 16",
+      "Early": 85.8,
+      "OnTime": 10.5,
+      "Delayed": 3.8
+    },
+    {
+      "semana": "Feb 23",
+      "Early": 88.0,
+      "OnTime": 7.6,
+      "Delayed": 4.4
+    },
+    {
+      "semana": "Mar 02",
+      "Early": 80.6,
+      "OnTime": 11.7,
+      "Delayed": 7.7
+    },
+    {
+      "semana": "Mar 09",
+      "Early": 78.9,
+      "OnTime": 11.0,
+      "Delayed": 10.1
+    },
+    {
+      "semana": "Mar 16",
+      "Early": 79.2,
+      "OnTime": 11.0,
+      "Delayed": 9.8
+    },
+    {
+      "semana": "Mar 23",
+      "Early": 85.4,
+      "OnTime": 8.8,
+      "Delayed": 5.8
+    },
+    {
+      "semana": "Mar 30",
+      "Early": 77.5,
+      "OnTime": 12.4,
+      "Delayed": 10.1
+    }
+  ],
+  "feature_importance": [
+    {
+      "feature": "destino_region",
+      "importance": 0.43799999356269836
+    },
+    {
+      "feature": "destino_site_id",
+      "importance": 0.2930000126361847
+    },
+    {
+      "feature": "create_hour",
+      "importance": 0.07599999755620956
+    },
+    {
+      "feature": "delivery_success_pct",
+      "importance": 0.07500000298023224
+    },
+    {
+      "feature": "occ_service_center_pct",
+      "importance": 0.06700000166893005
+    },
+    {
+      "feature": "create_day_of_week",
+      "importance": 0.050999999046325684
+    }
+  ],
+  "scatter": [
+    {
+      "t_promesa_h": 71.4,
+      "t_total_real_h": 36.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 66.2,
+      "t_total_real_h": 19.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 54.3,
+      "t_total_real_h": 35.7,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 53.0,
+      "t_total_real_h": 19.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 101.2,
+      "t_total_real_h": 45.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 58.2,
+      "t_total_real_h": 33.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 71.1,
+      "t_total_real_h": 32.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 51.4,
+      "t_total_real_h": 37.3,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 89.4,
+      "t_total_real_h": 87.1,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 61.5,
+      "t_total_real_h": 28.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 64.8,
+      "t_total_real_h": 80.5,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 61.0,
+      "t_total_real_h": 27.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 66.2,
+      "t_total_real_h": 28.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 51.0,
+      "t_total_real_h": 20.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 65.1,
+      "t_total_real_h": 33.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 94.2,
+      "t_total_real_h": 41.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 70.1,
+      "t_total_real_h": 39.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 107.4,
+      "t_total_real_h": 50.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 49.6,
+      "t_total_real_h": 18.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 97.6,
+      "t_total_real_h": 38.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 95.2,
+      "t_total_real_h": 43.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 51.6,
+      "t_total_real_h": 69.7,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 114.5,
+      "t_total_real_h": 40.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 71.2,
+      "t_total_real_h": 63.3,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 76.4,
+      "t_total_real_h": 43.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 82.5,
+      "t_total_real_h": 117.2,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 100.0,
+      "t_total_real_h": 37.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 116.8,
+      "t_total_real_h": 51.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 99.6,
+      "t_total_real_h": 49.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 73.8,
+      "t_total_real_h": 31.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 92.2,
+      "t_total_real_h": 30.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 54.8,
+      "t_total_real_h": 24.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 58.6,
+      "t_total_real_h": 23.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 114.5,
+      "t_total_real_h": 54.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 91.0,
+      "t_total_real_h": 38.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 104.9,
+      "t_total_real_h": 40.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 67.0,
+      "t_total_real_h": 36.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 95.1,
+      "t_total_real_h": 53.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 81.0,
+      "t_total_real_h": 36.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 76.0,
+      "t_total_real_h": 31.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 88.9,
+      "t_total_real_h": 39.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 75.3,
+      "t_total_real_h": 42.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 99.4,
+      "t_total_real_h": 45.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 90.0,
+      "t_total_real_h": 45.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 93.1,
+      "t_total_real_h": 40.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 51.4,
+      "t_total_real_h": 31.3,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 63.4,
+      "t_total_real_h": 22.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 86.5,
+      "t_total_real_h": 100.6,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 104.2,
+      "t_total_real_h": 87.4,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 54.3,
+      "t_total_real_h": 24.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 78.4,
+      "t_total_real_h": 43.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 78.4,
+      "t_total_real_h": 114.7,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 73.4,
+      "t_total_real_h": 37.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 60.0,
+      "t_total_real_h": 27.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 105.7,
+      "t_total_real_h": 56.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 51.0,
+      "t_total_real_h": 16.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 81.2,
+      "t_total_real_h": 37.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 110.0,
+      "t_total_real_h": 43.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 78.3,
+      "t_total_real_h": 38.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 65.9,
+      "t_total_real_h": 29.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 69.8,
+      "t_total_real_h": 23.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 114.4,
+      "t_total_real_h": 40.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 65.9,
+      "t_total_real_h": 20.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 53.1,
+      "t_total_real_h": 67.1,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 84.4,
+      "t_total_real_h": 39.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 94.4,
+      "t_total_real_h": 38.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 93.2,
+      "t_total_real_h": 46.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 100.0,
+      "t_total_real_h": 53.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 76.7,
+      "t_total_real_h": 52.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 96.7,
+      "t_total_real_h": 48.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 101.3,
+      "t_total_real_h": 43.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 89.6,
+      "t_total_real_h": 40.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 65.0,
+      "t_total_real_h": 18.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 88.4,
+      "t_total_real_h": 29.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 50.2,
+      "t_total_real_h": 30.8,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 100.1,
+      "t_total_real_h": 40.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 91.7,
+      "t_total_real_h": 32.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 84.7,
+      "t_total_real_h": 32.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 76.6,
+      "t_total_real_h": 49.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 47.8,
+      "t_total_real_h": 17.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 64.2,
+      "t_total_real_h": 24.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 95.7,
+      "t_total_real_h": 28.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 69.2,
+      "t_total_real_h": 18.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 91.9,
+      "t_total_real_h": 38.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 102.4,
+      "t_total_real_h": 92.3,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 62.1,
+      "t_total_real_h": 33.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 75.0,
+      "t_total_real_h": 47.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 107.1,
+      "t_total_real_h": 46.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 116.0,
+      "t_total_real_h": 53.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 54.6,
+      "t_total_real_h": 28.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 69.9,
+      "t_total_real_h": 18.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 75.0,
+      "t_total_real_h": 30.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 106.5,
+      "t_total_real_h": 50.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 97.5,
+      "t_total_real_h": 38.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 63.2,
+      "t_total_real_h": 18.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 66.5,
+      "t_total_real_h": 30.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 48.8,
+      "t_total_real_h": 30.5,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 89.6,
+      "t_total_real_h": 46.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 81.2,
+      "t_total_real_h": 25.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 72.3,
+      "t_total_real_h": 31.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 55.8,
+      "t_total_real_h": 27.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 76.6,
+      "t_total_real_h": 49.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 51.9,
+      "t_total_real_h": 26.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 54.9,
+      "t_total_real_h": 33.0,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 64.6,
+      "t_total_real_h": 28.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 78.9,
+      "t_total_real_h": 35.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 110.2,
+      "t_total_real_h": 81.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 49.1,
+      "t_total_real_h": 26.2,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 107.0,
+      "t_total_real_h": 48.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 93.1,
+      "t_total_real_h": 38.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 89.6,
+      "t_total_real_h": 85.8,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 80.0,
+      "t_total_real_h": 39.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 90.6,
+      "t_total_real_h": 38.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 53.7,
+      "t_total_real_h": 19.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 62.1,
+      "t_total_real_h": 33.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 74.3,
+      "t_total_real_h": 42.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 80.2,
+      "t_total_real_h": 54.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 111.9,
+      "t_total_real_h": 43.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 50.7,
+      "t_total_real_h": 24.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 94.3,
+      "t_total_real_h": 50.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 92.4,
+      "t_total_real_h": 70.0,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 111.7,
+      "t_total_real_h": 46.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 99.6,
+      "t_total_real_h": 55.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 56.2,
+      "t_total_real_h": 19.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 55.2,
+      "t_total_real_h": 26.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 95.7,
+      "t_total_real_h": 54.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 87.5,
+      "t_total_real_h": 35.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 117.4,
+      "t_total_real_h": 39.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 62.9,
+      "t_total_real_h": 17.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 68.1,
+      "t_total_real_h": 24.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 98.3,
+      "t_total_real_h": 44.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 75.4,
+      "t_total_real_h": 25.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 54.8,
+      "t_total_real_h": 19.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 89.7,
+      "t_total_real_h": 29.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 107.8,
+      "t_total_real_h": 81.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 68.0,
+      "t_total_real_h": 35.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 67.8,
+      "t_total_real_h": 25.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 63.5,
+      "t_total_real_h": 19.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 117.2,
+      "t_total_real_h": 42.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 62.3,
+      "t_total_real_h": 21.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 98.5,
+      "t_total_real_h": 108.0,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 95.0,
+      "t_total_real_h": 50.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 78.6,
+      "t_total_real_h": 33.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 69.7,
+      "t_total_real_h": 30.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 74.9,
+      "t_total_real_h": 32.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 107.0,
+      "t_total_real_h": 43.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 117.4,
+      "t_total_real_h": 99.0,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 80.6,
+      "t_total_real_h": 42.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 84.8,
+      "t_total_real_h": 30.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 72.8,
+      "t_total_real_h": 27.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 72.7,
+      "t_total_real_h": 88.7,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 86.1,
+      "t_total_real_h": 46.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 73.5,
+      "t_total_real_h": 24.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 58.0,
+      "t_total_real_h": 82.4,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 88.6,
+      "t_total_real_h": 41.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 112.6,
+      "t_total_real_h": 45.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 51.0,
+      "t_total_real_h": 75.7,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 87.5,
+      "t_total_real_h": 39.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 112.2,
+      "t_total_real_h": 46.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 92.8,
+      "t_total_real_h": 29.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 118.0,
+      "t_total_real_h": 54.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 52.3,
+      "t_total_real_h": 18.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 81.0,
+      "t_total_real_h": 34.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 105.0,
+      "t_total_real_h": 40.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 94.7,
+      "t_total_real_h": 35.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 94.8,
+      "t_total_real_h": 42.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 97.4,
+      "t_total_real_h": 43.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 110.4,
+      "t_total_real_h": 70.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 74.4,
+      "t_total_real_h": 74.2,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 95.9,
+      "t_total_real_h": 35.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 103.2,
+      "t_total_real_h": 117.8,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 108.2,
+      "t_total_real_h": 42.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 90.7,
+      "t_total_real_h": 41.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 92.4,
+      "t_total_real_h": 30.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 75.1,
+      "t_total_real_h": 45.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 91.0,
+      "t_total_real_h": 44.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 114.7,
+      "t_total_real_h": 47.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 50.0,
+      "t_total_real_h": 21.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 81.4,
+      "t_total_real_h": 38.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 103.0,
+      "t_total_real_h": 53.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 104.0,
+      "t_total_real_h": 53.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 103.8,
+      "t_total_real_h": 46.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 105.8,
+      "t_total_real_h": 46.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 76.0,
+      "t_total_real_h": 29.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 76.8,
+      "t_total_real_h": 41.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 99.0,
+      "t_total_real_h": 47.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 79.1,
+      "t_total_real_h": 48.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 72.4,
+      "t_total_real_h": 99.3,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 46.6,
+      "t_total_real_h": 89.6,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 57.8,
+      "t_total_real_h": 22.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 111.6,
+      "t_total_real_h": 45.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 75.0,
+      "t_total_real_h": 37.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 103.6,
+      "t_total_real_h": 50.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 60.2,
+      "t_total_real_h": 25.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 98.2,
+      "t_total_real_h": 47.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 81.0,
+      "t_total_real_h": 41.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 111.1,
+      "t_total_real_h": 32.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 113.6,
+      "t_total_real_h": 55.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 63.0,
+      "t_total_real_h": 11.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 67.2,
+      "t_total_real_h": 28.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 108.6,
+      "t_total_real_h": 58.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 65.8,
+      "t_total_real_h": 24.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 117.0,
+      "t_total_real_h": 39.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 112.7,
+      "t_total_real_h": 54.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 81.5,
+      "t_total_real_h": 34.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 68.3,
+      "t_total_real_h": 26.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 106.4,
+      "t_total_real_h": 53.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 91.0,
+      "t_total_real_h": 25.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 47.8,
+      "t_total_real_h": 80.6,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 68.7,
+      "t_total_real_h": 24.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 62.0,
+      "t_total_real_h": 29.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 52.5,
+      "t_total_real_h": 24.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 101.6,
+      "t_total_real_h": 47.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 75.1,
+      "t_total_real_h": 42.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 100.8,
+      "t_total_real_h": 48.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 69.8,
+      "t_total_real_h": 25.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 100.1,
+      "t_total_real_h": 42.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 85.0,
+      "t_total_real_h": 32.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 107.1,
+      "t_total_real_h": 45.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 99.4,
+      "t_total_real_h": 48.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 85.7,
+      "t_total_real_h": 30.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 59.6,
+      "t_total_real_h": 28.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 113.3,
+      "t_total_real_h": 42.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 80.6,
+      "t_total_real_h": 39.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 85.5,
+      "t_total_real_h": 45.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 53.9,
+      "t_total_real_h": 24.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 97.0,
+      "t_total_real_h": 35.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 74.1,
+      "t_total_real_h": 35.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 98.7,
+      "t_total_real_h": 48.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 76.0,
+      "t_total_real_h": 21.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 57.4,
+      "t_total_real_h": 33.9,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 72.3,
+      "t_total_real_h": 42.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 59.1,
+      "t_total_real_h": 61.9,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 94.1,
+      "t_total_real_h": 42.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 116.6,
+      "t_total_real_h": 43.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 77.8,
+      "t_total_real_h": 37.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 60.7,
+      "t_total_real_h": 27.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 96.3,
+      "t_total_real_h": 54.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 114.0,
+      "t_total_real_h": 52.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 101.4,
+      "t_total_real_h": 33.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 52.9,
+      "t_total_real_h": 36.6,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 96.1,
+      "t_total_real_h": 37.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 112.2,
+      "t_total_real_h": 77.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 96.7,
+      "t_total_real_h": 47.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 74.1,
+      "t_total_real_h": 45.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 108.9,
+      "t_total_real_h": 38.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 81.4,
+      "t_total_real_h": 37.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 90.3,
+      "t_total_real_h": 41.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 112.2,
+      "t_total_real_h": 35.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 50.7,
+      "t_total_real_h": 18.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 93.2,
+      "t_total_real_h": 37.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 71.4,
+      "t_total_real_h": 38.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 96.9,
+      "t_total_real_h": 55.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 89.8,
+      "t_total_real_h": 39.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 67.6,
+      "t_total_real_h": 17.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 64.9,
+      "t_total_real_h": 26.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 52.5,
+      "t_total_real_h": 15.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 67.4,
+      "t_total_real_h": 31.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 93.0,
+      "t_total_real_h": 36.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 110.7,
+      "t_total_real_h": 58.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 67.6,
+      "t_total_real_h": 24.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 63.0,
+      "t_total_real_h": 17.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 87.9,
+      "t_total_real_h": 32.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 62.0,
+      "t_total_real_h": 29.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 103.6,
+      "t_total_real_h": 48.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 58.8,
+      "t_total_real_h": 46.6,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 48.4,
+      "t_total_real_h": 68.2,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 84.0,
+      "t_total_real_h": 32.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 69.6,
+      "t_total_real_h": 16.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 84.2,
+      "t_total_real_h": 44.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 87.5,
+      "t_total_real_h": 32.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 58.6,
+      "t_total_real_h": 14.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 111.9,
+      "t_total_real_h": 36.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 57.6,
+      "t_total_real_h": 28.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 49.9,
+      "t_total_real_h": 17.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 107.4,
+      "t_total_real_h": 45.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 103.4,
+      "t_total_real_h": 48.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 109.0,
+      "t_total_real_h": 43.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 95.6,
+      "t_total_real_h": 90.9,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 52.4,
+      "t_total_real_h": 30.1,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 69.8,
+      "t_total_real_h": 31.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 93.7,
+      "t_total_real_h": 47.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 117.2,
+      "t_total_real_h": 43.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 91.2,
+      "t_total_real_h": 27.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 62.6,
+      "t_total_real_h": 82.3,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 66.2,
+      "t_total_real_h": 30.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 86.6,
+      "t_total_real_h": 79.2,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 88.9,
+      "t_total_real_h": 40.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 109.8,
+      "t_total_real_h": 55.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 63.4,
+      "t_total_real_h": 29.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 106.6,
+      "t_total_real_h": 35.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 88.4,
+      "t_total_real_h": 46.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 108.6,
+      "t_total_real_h": 41.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 58.5,
+      "t_total_real_h": 19.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 89.5,
+      "t_total_real_h": 22.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 75.2,
+      "t_total_real_h": 36.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 107.8,
+      "t_total_real_h": 64.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 105.9,
+      "t_total_real_h": 45.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 55.6,
+      "t_total_real_h": 21.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 60.6,
+      "t_total_real_h": 88.5,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 114.6,
+      "t_total_real_h": 46.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 117.2,
+      "t_total_real_h": 48.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 103.6,
+      "t_total_real_h": 30.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 60.5,
+      "t_total_real_h": 37.3,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 57.4,
+      "t_total_real_h": 20.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 106.7,
+      "t_total_real_h": 32.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 89.3,
+      "t_total_real_h": 66.1,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 64.1,
+      "t_total_real_h": 32.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 50.5,
+      "t_total_real_h": 29.4,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 46.2,
+      "t_total_real_h": 33.2,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 105.8,
+      "t_total_real_h": 35.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 105.9,
+      "t_total_real_h": 47.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 63.2,
+      "t_total_real_h": 21.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 111.2,
+      "t_total_real_h": 47.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 53.0,
+      "t_total_real_h": 26.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 67.0,
+      "t_total_real_h": 59.0,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 113.3,
+      "t_total_real_h": 41.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 79.7,
+      "t_total_real_h": 105.9,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 57.7,
+      "t_total_real_h": 28.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 51.5,
+      "t_total_real_h": 26.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 47.7,
+      "t_total_real_h": 33.0,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 99.6,
+      "t_total_real_h": 49.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 88.9,
+      "t_total_real_h": 44.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 74.0,
+      "t_total_real_h": 31.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 50.3,
+      "t_total_real_h": 42.4,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 73.6,
+      "t_total_real_h": 39.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 48.7,
+      "t_total_real_h": 15.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 101.8,
+      "t_total_real_h": 50.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 70.9,
+      "t_total_real_h": 24.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 89.2,
+      "t_total_real_h": 33.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 100.1,
+      "t_total_real_h": 99.1,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 97.7,
+      "t_total_real_h": 37.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 62.1,
+      "t_total_real_h": 70.4,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 103.0,
+      "t_total_real_h": 59.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 85.2,
+      "t_total_real_h": 29.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 67.2,
+      "t_total_real_h": 17.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 81.4,
+      "t_total_real_h": 44.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 86.1,
+      "t_total_real_h": 29.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 47.8,
+      "t_total_real_h": 13.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 74.8,
+      "t_total_real_h": 39.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 108.5,
+      "t_total_real_h": 43.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 76.8,
+      "t_total_real_h": 38.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 51.6,
+      "t_total_real_h": 17.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 109.1,
+      "t_total_real_h": 52.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 66.4,
+      "t_total_real_h": 27.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 52.6,
+      "t_total_real_h": 58.5,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 52.3,
+      "t_total_real_h": 13.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 71.5,
+      "t_total_real_h": 41.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 69.5,
+      "t_total_real_h": 37.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 117.7,
+      "t_total_real_h": 40.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 80.6,
+      "t_total_real_h": 39.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 60.2,
+      "t_total_real_h": 91.1,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 110.3,
+      "t_total_real_h": 55.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 107.7,
+      "t_total_real_h": 86.3,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 81.3,
+      "t_total_real_h": 33.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 69.4,
+      "t_total_real_h": 84.0,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 71.5,
+      "t_total_real_h": 38.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 87.8,
+      "t_total_real_h": 33.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 89.0,
+      "t_total_real_h": 76.2,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 67.5,
+      "t_total_real_h": 15.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 74.2,
+      "t_total_real_h": 93.9,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 94.5,
+      "t_total_real_h": 45.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 83.0,
+      "t_total_real_h": 33.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 109.0,
+      "t_total_real_h": 50.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 74.0,
+      "t_total_real_h": 37.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 49.8,
+      "t_total_real_h": 84.8,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 101.6,
+      "t_total_real_h": 32.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 49.0,
+      "t_total_real_h": 58.7,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 72.8,
+      "t_total_real_h": 32.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 50.1,
+      "t_total_real_h": 27.7,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 112.9,
+      "t_total_real_h": 40.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 86.7,
+      "t_total_real_h": 25.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 102.3,
+      "t_total_real_h": 92.8,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 79.2,
+      "t_total_real_h": 114.1,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 70.0,
+      "t_total_real_h": 86.8,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 115.3,
+      "t_total_real_h": 53.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 69.6,
+      "t_total_real_h": 98.2,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 64.6,
+      "t_total_real_h": 17.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 113.4,
+      "t_total_real_h": 42.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 108.2,
+      "t_total_real_h": 45.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 107.6,
+      "t_total_real_h": 44.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 49.3,
+      "t_total_real_h": 28.4,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 99.2,
+      "t_total_real_h": 40.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 114.1,
+      "t_total_real_h": 77.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 113.6,
+      "t_total_real_h": 38.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 97.6,
+      "t_total_real_h": 48.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 72.1,
+      "t_total_real_h": 32.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 59.2,
+      "t_total_real_h": 22.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 75.6,
+      "t_total_real_h": 26.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 83.4,
+      "t_total_real_h": 40.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 113.1,
+      "t_total_real_h": 115.6,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 114.2,
+      "t_total_real_h": 47.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 78.8,
+      "t_total_real_h": 31.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 103.5,
+      "t_total_real_h": 55.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 64.0,
+      "t_total_real_h": 16.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 90.2,
+      "t_total_real_h": 74.1,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 67.5,
+      "t_total_real_h": 64.3,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 114.2,
+      "t_total_real_h": 54.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 80.4,
+      "t_total_real_h": 46.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 50.3,
+      "t_total_real_h": 63.1,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 55.6,
+      "t_total_real_h": 24.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 92.7,
+      "t_total_real_h": 28.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 82.9,
+      "t_total_real_h": 32.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 54.8,
+      "t_total_real_h": 34.9,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 99.4,
+      "t_total_real_h": 40.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 46.4,
+      "t_total_real_h": 19.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 77.4,
+      "t_total_real_h": 39.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 107.9,
+      "t_total_real_h": 49.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 90.0,
+      "t_total_real_h": 19.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 87.8,
+      "t_total_real_h": 37.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 51.7,
+      "t_total_real_h": 31.4,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 98.3,
+      "t_total_real_h": 45.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 58.4,
+      "t_total_real_h": 30.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 59.3,
+      "t_total_real_h": 79.4,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 56.8,
+      "t_total_real_h": 20.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 77.4,
+      "t_total_real_h": 40.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 82.8,
+      "t_total_real_h": 35.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 75.2,
+      "t_total_real_h": 35.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 102.6,
+      "t_total_real_h": 46.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 73.5,
+      "t_total_real_h": 27.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 71.7,
+      "t_total_real_h": 39.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 97.1,
+      "t_total_real_h": 55.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 92.5,
+      "t_total_real_h": 40.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 73.2,
+      "t_total_real_h": 32.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 114.6,
+      "t_total_real_h": 71.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 76.2,
+      "t_total_real_h": 43.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 110.4,
+      "t_total_real_h": 40.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 78.9,
+      "t_total_real_h": 33.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 115.7,
+      "t_total_real_h": 43.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 92.4,
+      "t_total_real_h": 31.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 111.0,
+      "t_total_real_h": 36.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 99.8,
+      "t_total_real_h": 41.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 104.8,
+      "t_total_real_h": 64.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 110.1,
+      "t_total_real_h": 59.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 53.1,
+      "t_total_real_h": 29.9,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 84.3,
+      "t_total_real_h": 72.0,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 60.2,
+      "t_total_real_h": 31.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 63.5,
+      "t_total_real_h": 89.7,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 96.9,
+      "t_total_real_h": 45.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 66.2,
+      "t_total_real_h": 31.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 84.2,
+      "t_total_real_h": 37.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 73.4,
+      "t_total_real_h": 45.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 64.9,
+      "t_total_real_h": 22.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 105.1,
+      "t_total_real_h": 52.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 115.4,
+      "t_total_real_h": 41.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 104.7,
+      "t_total_real_h": 105.4,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 91.5,
+      "t_total_real_h": 39.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 104.3,
+      "t_total_real_h": 57.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 111.3,
+      "t_total_real_h": 39.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 99.3,
+      "t_total_real_h": 44.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 58.5,
+      "t_total_real_h": 75.4,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 77.0,
+      "t_total_real_h": 38.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 95.2,
+      "t_total_real_h": 37.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 53.4,
+      "t_total_real_h": 18.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 69.6,
+      "t_total_real_h": 20.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 68.5,
+      "t_total_real_h": 97.1,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 54.7,
+      "t_total_real_h": 18.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 71.9,
+      "t_total_real_h": 45.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 59.4,
+      "t_total_real_h": 90.0,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 55.9,
+      "t_total_real_h": 31.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 62.5,
+      "t_total_real_h": 41.1,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 72.4,
+      "t_total_real_h": 42.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 63.0,
+      "t_total_real_h": 18.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 71.2,
+      "t_total_real_h": 30.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 77.6,
+      "t_total_real_h": 41.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 72.2,
+      "t_total_real_h": 49.5,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 58.9,
+      "t_total_real_h": 19.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 78.8,
+      "t_total_real_h": 32.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 58.4,
+      "t_total_real_h": 81.9,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 47.4,
+      "t_total_real_h": 31.1,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 112.3,
+      "t_total_real_h": 65.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 50.8,
+      "t_total_real_h": 17.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 62.4,
+      "t_total_real_h": 27.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 68.9,
+      "t_total_real_h": 11.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 56.4,
+      "t_total_real_h": 16.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 65.6,
+      "t_total_real_h": 69.7,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 61.1,
+      "t_total_real_h": 31.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 96.5,
+      "t_total_real_h": 86.6,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 98.1,
+      "t_total_real_h": 42.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 77.3,
+      "t_total_real_h": 40.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 54.7,
+      "t_total_real_h": 21.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 67.6,
+      "t_total_real_h": 29.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 113.7,
+      "t_total_real_h": 58.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 66.9,
+      "t_total_real_h": 17.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 117.4,
+      "t_total_real_h": 49.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 56.1,
+      "t_total_real_h": 69.1,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 96.8,
+      "t_total_real_h": 41.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 109.2,
+      "t_total_real_h": 49.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 113.3,
+      "t_total_real_h": 55.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 82.0,
+      "t_total_real_h": 21.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 105.0,
+      "t_total_real_h": 52.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 101.0,
+      "t_total_real_h": 44.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 61.6,
+      "t_total_real_h": 17.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 115.4,
+      "t_total_real_h": 54.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 110.5,
+      "t_total_real_h": 44.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 83.0,
+      "t_total_real_h": 34.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 56.1,
+      "t_total_real_h": 24.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 86.8,
+      "t_total_real_h": 25.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 117.1,
+      "t_total_real_h": 46.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 93.5,
+      "t_total_real_h": 44.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 99.4,
+      "t_total_real_h": 50.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 113.5,
+      "t_total_real_h": 34.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 116.2,
+      "t_total_real_h": 52.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 88.9,
+      "t_total_real_h": 38.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 73.8,
+      "t_total_real_h": 19.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 50.2,
+      "t_total_real_h": 39.8,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 112.6,
+      "t_total_real_h": 46.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 89.9,
+      "t_total_real_h": 40.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 54.4,
+      "t_total_real_h": 27.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 96.5,
+      "t_total_real_h": 41.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 77.2,
+      "t_total_real_h": 74.2,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 99.9,
+      "t_total_real_h": 55.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 117.5,
+      "t_total_real_h": 39.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 58.7,
+      "t_total_real_h": 20.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 79.1,
+      "t_total_real_h": 32.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 85.3,
+      "t_total_real_h": 38.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 62.1,
+      "t_total_real_h": 30.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 91.1,
+      "t_total_real_h": 36.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 65.6,
+      "t_total_real_h": 17.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 65.5,
+      "t_total_real_h": 15.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 84.9,
+      "t_total_real_h": 40.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 83.8,
+      "t_total_real_h": 31.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 80.3,
+      "t_total_real_h": 25.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 61.1,
+      "t_total_real_h": 20.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 53.7,
+      "t_total_real_h": 17.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 113.1,
+      "t_total_real_h": 39.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 50.4,
+      "t_total_real_h": 20.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 86.2,
+      "t_total_real_h": 41.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 116.8,
+      "t_total_real_h": 47.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 117.2,
+      "t_total_real_h": 53.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 69.4,
+      "t_total_real_h": 22.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 82.9,
+      "t_total_real_h": 36.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 76.7,
+      "t_total_real_h": 35.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 79.3,
+      "t_total_real_h": 24.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 114.6,
+      "t_total_real_h": 24.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 102.1,
+      "t_total_real_h": 47.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 74.3,
+      "t_total_real_h": 77.3,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 71.7,
+      "t_total_real_h": 77.9,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 114.8,
+      "t_total_real_h": 76.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 53.8,
+      "t_total_real_h": 21.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 99.4,
+      "t_total_real_h": 58.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 99.4,
+      "t_total_real_h": 44.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 75.0,
+      "t_total_real_h": 27.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 71.0,
+      "t_total_real_h": 39.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 92.9,
+      "t_total_real_h": 78.1,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 115.5,
+      "t_total_real_h": 59.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 114.6,
+      "t_total_real_h": 38.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 117.4,
+      "t_total_real_h": 37.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 63.9,
+      "t_total_real_h": 25.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 108.7,
+      "t_total_real_h": 50.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 69.4,
+      "t_total_real_h": 42.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 84.3,
+      "t_total_real_h": 48.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 69.0,
+      "t_total_real_h": 23.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 67.8,
+      "t_total_real_h": 25.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 90.6,
+      "t_total_real_h": 36.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 114.2,
+      "t_total_real_h": 51.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 116.0,
+      "t_total_real_h": 34.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 92.8,
+      "t_total_real_h": 32.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 74.9,
+      "t_total_real_h": 33.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 106.2,
+      "t_total_real_h": 45.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 66.2,
+      "t_total_real_h": 29.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 88.2,
+      "t_total_real_h": 28.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 51.1,
+      "t_total_real_h": 23.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 51.8,
+      "t_total_real_h": 29.1,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 117.8,
+      "t_total_real_h": 47.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 71.9,
+      "t_total_real_h": 32.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 85.6,
+      "t_total_real_h": 28.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 78.0,
+      "t_total_real_h": 27.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 92.9,
+      "t_total_real_h": 32.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 92.2,
+      "t_total_real_h": 24.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 72.4,
+      "t_total_real_h": 81.5,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 81.6,
+      "t_total_real_h": 31.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 58.3,
+      "t_total_real_h": 86.5,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 103.0,
+      "t_total_real_h": 52.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 59.7,
+      "t_total_real_h": 18.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 63.6,
+      "t_total_real_h": 21.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 85.8,
+      "t_total_real_h": 96.0,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 48.3,
+      "t_total_real_h": 111.1,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 95.9,
+      "t_total_real_h": 54.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 98.0,
+      "t_total_real_h": 44.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 49.7,
+      "t_total_real_h": 25.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 98.5,
+      "t_total_real_h": 71.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 106.6,
+      "t_total_real_h": 48.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 110.0,
+      "t_total_real_h": 46.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 91.6,
+      "t_total_real_h": 32.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 82.6,
+      "t_total_real_h": 47.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 76.5,
+      "t_total_real_h": 44.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 80.8,
+      "t_total_real_h": 41.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 78.6,
+      "t_total_real_h": 28.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 93.8,
+      "t_total_real_h": 49.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 96.1,
+      "t_total_real_h": 40.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 85.8,
+      "t_total_real_h": 34.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 67.9,
+      "t_total_real_h": 67.6,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 108.2,
+      "t_total_real_h": 39.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 79.9,
+      "t_total_real_h": 35.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 57.4,
+      "t_total_real_h": 22.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 79.7,
+      "t_total_real_h": 25.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 115.4,
+      "t_total_real_h": 99.1,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 106.9,
+      "t_total_real_h": 56.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 60.9,
+      "t_total_real_h": 34.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 80.3,
+      "t_total_real_h": 75.1,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 84.1,
+      "t_total_real_h": 37.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 47.8,
+      "t_total_real_h": 28.5,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 85.3,
+      "t_total_real_h": 23.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 86.8,
+      "t_total_real_h": 33.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 101.4,
+      "t_total_real_h": 43.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 54.3,
+      "t_total_real_h": 16.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 81.4,
+      "t_total_real_h": 43.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 98.8,
+      "t_total_real_h": 45.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 85.7,
+      "t_total_real_h": 39.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 71.0,
+      "t_total_real_h": 31.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 107.0,
+      "t_total_real_h": 102.6,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 66.6,
+      "t_total_real_h": 23.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 101.0,
+      "t_total_real_h": 42.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 90.2,
+      "t_total_real_h": 30.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 72.0,
+      "t_total_real_h": 48.3,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 83.3,
+      "t_total_real_h": 33.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 113.2,
+      "t_total_real_h": 40.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 99.1,
+      "t_total_real_h": 98.8,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 57.4,
+      "t_total_real_h": 21.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 107.6,
+      "t_total_real_h": 44.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 48.2,
+      "t_total_real_h": 38.4,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 111.6,
+      "t_total_real_h": 49.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 53.4,
+      "t_total_real_h": 26.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 99.1,
+      "t_total_real_h": 46.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 108.2,
+      "t_total_real_h": 39.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 97.8,
+      "t_total_real_h": 38.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 92.8,
+      "t_total_real_h": 36.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 116.3,
+      "t_total_real_h": 113.0,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 105.0,
+      "t_total_real_h": 40.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 76.2,
+      "t_total_real_h": 21.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 83.4,
+      "t_total_real_h": 40.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 55.8,
+      "t_total_real_h": 21.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 78.0,
+      "t_total_real_h": 31.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 54.9,
+      "t_total_real_h": 26.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 69.9,
+      "t_total_real_h": 40.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 94.3,
+      "t_total_real_h": 44.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 86.7,
+      "t_total_real_h": 35.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 102.0,
+      "t_total_real_h": 51.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 64.4,
+      "t_total_real_h": 92.9,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 97.0,
+      "t_total_real_h": 43.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 111.8,
+      "t_total_real_h": 43.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 114.4,
+      "t_total_real_h": 61.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 84.9,
+      "t_total_real_h": 38.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 59.3,
+      "t_total_real_h": 27.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 65.0,
+      "t_total_real_h": 76.4,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 71.1,
+      "t_total_real_h": 46.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 106.0,
+      "t_total_real_h": 56.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 64.7,
+      "t_total_real_h": 23.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 89.6,
+      "t_total_real_h": 64.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 101.1,
+      "t_total_real_h": 123.7,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 109.4,
+      "t_total_real_h": 34.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 62.0,
+      "t_total_real_h": 23.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 56.3,
+      "t_total_real_h": 22.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 65.0,
+      "t_total_real_h": 25.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 71.6,
+      "t_total_real_h": 27.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 117.5,
+      "t_total_real_h": 64.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 90.2,
+      "t_total_real_h": 39.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 78.5,
+      "t_total_real_h": 45.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 50.2,
+      "t_total_real_h": 20.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 84.5,
+      "t_total_real_h": 37.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 55.6,
+      "t_total_real_h": 82.1,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 106.7,
+      "t_total_real_h": 35.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 83.4,
+      "t_total_real_h": 46.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 73.6,
+      "t_total_real_h": 29.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 70.7,
+      "t_total_real_h": 44.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 94.2,
+      "t_total_real_h": 107.8,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 84.5,
+      "t_total_real_h": 31.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 75.5,
+      "t_total_real_h": 40.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 90.6,
+      "t_total_real_h": 25.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 63.6,
+      "t_total_real_h": 27.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 58.7,
+      "t_total_real_h": 51.9,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 76.0,
+      "t_total_real_h": 105.4,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 71.4,
+      "t_total_real_h": 39.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 96.4,
+      "t_total_real_h": 57.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 81.0,
+      "t_total_real_h": 33.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 59.0,
+      "t_total_real_h": 14.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 100.6,
+      "t_total_real_h": 49.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 52.7,
+      "t_total_real_h": 30.2,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 65.4,
+      "t_total_real_h": 29.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 77.2,
+      "t_total_real_h": 83.5,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 47.3,
+      "t_total_real_h": 70.2,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 51.0,
+      "t_total_real_h": 29.8,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 105.4,
+      "t_total_real_h": 42.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 53.5,
+      "t_total_real_h": 33.3,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 46.5,
+      "t_total_real_h": 23.0,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 97.9,
+      "t_total_real_h": 48.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 94.6,
+      "t_total_real_h": 39.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 93.3,
+      "t_total_real_h": 41.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 66.3,
+      "t_total_real_h": 81.7,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 48.5,
+      "t_total_real_h": 8.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 72.6,
+      "t_total_real_h": 44.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 49.4,
+      "t_total_real_h": 36.8,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 51.4,
+      "t_total_real_h": 36.0,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 89.8,
+      "t_total_real_h": 35.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 98.1,
+      "t_total_real_h": 48.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 106.2,
+      "t_total_real_h": 51.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 53.7,
+      "t_total_real_h": 86.7,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 116.8,
+      "t_total_real_h": 93.0,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 53.2,
+      "t_total_real_h": 15.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 94.5,
+      "t_total_real_h": 39.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 92.5,
+      "t_total_real_h": 20.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 89.2,
+      "t_total_real_h": 34.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 57.5,
+      "t_total_real_h": 29.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 67.9,
+      "t_total_real_h": 66.0,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 90.8,
+      "t_total_real_h": 46.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 62.6,
+      "t_total_real_h": 36.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 81.8,
+      "t_total_real_h": 22.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 105.7,
+      "t_total_real_h": 45.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 101.2,
+      "t_total_real_h": 48.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 55.0,
+      "t_total_real_h": 16.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 92.4,
+      "t_total_real_h": 51.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 91.6,
+      "t_total_real_h": 35.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 112.2,
+      "t_total_real_h": 46.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 61.9,
+      "t_total_real_h": 14.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 59.0,
+      "t_total_real_h": 16.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 60.8,
+      "t_total_real_h": 16.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 96.6,
+      "t_total_real_h": 51.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 94.6,
+      "t_total_real_h": 54.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 54.5,
+      "t_total_real_h": 32.0,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 109.0,
+      "t_total_real_h": 49.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 113.6,
+      "t_total_real_h": 40.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 64.6,
+      "t_total_real_h": 14.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 69.0,
+      "t_total_real_h": 27.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 116.8,
+      "t_total_real_h": 50.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 114.2,
+      "t_total_real_h": 44.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 53.5,
+      "t_total_real_h": 24.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 115.4,
+      "t_total_real_h": 64.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 106.6,
+      "t_total_real_h": 48.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 82.6,
+      "t_total_real_h": 95.6,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 71.7,
+      "t_total_real_h": 40.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 103.4,
+      "t_total_real_h": 48.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 51.0,
+      "t_total_real_h": 16.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 65.9,
+      "t_total_real_h": 27.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 74.7,
+      "t_total_real_h": 74.3,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 70.7,
+      "t_total_real_h": 45.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 52.7,
+      "t_total_real_h": 13.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 115.2,
+      "t_total_real_h": 56.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 99.4,
+      "t_total_real_h": 58.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 103.4,
+      "t_total_real_h": 42.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 57.5,
+      "t_total_real_h": 19.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 91.5,
+      "t_total_real_h": 41.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 97.2,
+      "t_total_real_h": 82.8,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 93.0,
+      "t_total_real_h": 36.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 48.4,
+      "t_total_real_h": 87.3,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 101.8,
+      "t_total_real_h": 100.1,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 63.7,
+      "t_total_real_h": 28.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 76.2,
+      "t_total_real_h": 27.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 110.6,
+      "t_total_real_h": 41.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 58.0,
+      "t_total_real_h": 34.9,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 81.7,
+      "t_total_real_h": 42.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 58.0,
+      "t_total_real_h": 32.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 99.2,
+      "t_total_real_h": 102.8,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 74.7,
+      "t_total_real_h": 35.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 81.5,
+      "t_total_real_h": 45.5,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 114.1,
+      "t_total_real_h": 52.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 81.2,
+      "t_total_real_h": 26.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 79.9,
+      "t_total_real_h": 37.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 86.8,
+      "t_total_real_h": 27.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 64.9,
+      "t_total_real_h": 16.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 79.1,
+      "t_total_real_h": 32.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 74.8,
+      "t_total_real_h": 44.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 77.4,
+      "t_total_real_h": 25.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 117.4,
+      "t_total_real_h": 56.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 50.4,
+      "t_total_real_h": 17.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 97.9,
+      "t_total_real_h": 82.5,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 103.8,
+      "t_total_real_h": 49.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 69.5,
+      "t_total_real_h": 35.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 82.4,
+      "t_total_real_h": 23.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 88.8,
+      "t_total_real_h": 26.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 106.0,
+      "t_total_real_h": 94.4,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 58.2,
+      "t_total_real_h": 18.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 96.7,
+      "t_total_real_h": 43.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 82.0,
+      "t_total_real_h": 43.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 52.6,
+      "t_total_real_h": 79.1,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 96.3,
+      "t_total_real_h": 40.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 51.8,
+      "t_total_real_h": 19.1,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 66.0,
+      "t_total_real_h": 35.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 82.8,
+      "t_total_real_h": 62.2,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 56.5,
+      "t_total_real_h": 81.8,
+      "delivery_status": "Delayed",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 63.6,
+      "t_total_real_h": 27.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 102.3,
+      "t_total_real_h": 46.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 83.2,
+      "t_total_real_h": 45.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 110.0,
+      "t_total_real_h": 49.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 104.6,
+      "t_total_real_h": 52.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 100.3,
+      "t_total_real_h": 54.0,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 115.6,
+      "t_total_real_h": 34.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 50.8,
+      "t_total_real_h": 31.1,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 106.8,
+      "t_total_real_h": 101.8,
+      "delivery_status": "On-Time",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 83.6,
+      "t_total_real_h": 48.8,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 51.4,
+      "t_total_real_h": 20.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 66.3,
+      "t_total_real_h": 25.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 56.9,
+      "t_total_real_h": 28.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 115.0,
+      "t_total_real_h": 45.2,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 66.1,
+      "t_total_real_h": 37.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMX11"
+    },
+    {
+      "t_promesa_h": 101.2,
+      "t_total_real_h": 51.4,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 116.4,
+      "t_total_real_h": 51.6,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 95.5,
+      "t_total_real_h": 45.3,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    },
+    {
+      "t_promesa_h": 72.0,
+      "t_total_real_h": 44.9,
+      "delivery_status": "Early",
+      "destino_site_id": "SMT01"
+    },
+    {
+      "t_promesa_h": 112.0,
+      "t_total_real_h": 48.7,
+      "delivery_status": "Early",
+      "destino_site_id": "SME03"
+    }
+  ],
+  "boxplots": [
+    {
+      "destino": "SC Monterrey",
+      "etapa": "Preparación",
+      "min": 2.7,
+      "q1": 5.1,
+      "median": 8.0,
+      "q3": 10.9,
+      "max": 13.4
+    },
+    {
+      "destino": "SC Monterrey",
+      "etapa": "Linehaul",
+      "min": 9.9,
+      "q1": 12.3,
+      "median": 14.0,
+      "q3": 15.4,
+      "max": 18.0
+    },
+    {
+      "destino": "SC Monterrey",
+      "etapa": "Última milla",
+      "min": 5.4,
+      "q1": 10.1,
+      "median": 16.2,
+      "q3": 21.7,
+      "max": 73.5
+    },
+    {
+      "destino": "SC Merida",
+      "etapa": "Preparación",
+      "min": 2.6,
+      "q1": 4.9,
+      "median": 7.9,
+      "q3": 10.8,
+      "max": 13.3
+    },
+    {
+      "destino": "SC Merida",
+      "etapa": "Linehaul",
+      "min": 17.5,
+      "q1": 21.3,
+      "median": 23.7,
+      "q3": 26.6,
+      "max": 30.6
+    },
+    {
+      "destino": "SC Merida",
+      "etapa": "Última milla",
+      "min": 5.4,
+      "q1": 10.0,
+      "median": 15.6,
+      "q3": 21.6,
+      "max": 68.2
+    },
+    {
+      "destino": "SC CDMX",
+      "etapa": "Preparación",
+      "min": 2.6,
+      "q1": 4.9,
+      "median": 8.3,
+      "q3": 11.0,
+      "max": 13.4
+    },
+    {
+      "destino": "SC CDMX",
+      "etapa": "Linehaul",
+      "min": 0.8,
+      "q1": 1.8,
+      "median": 2.6,
+      "q3": 3.2,
+      "max": 4.1
+    },
+    {
+      "destino": "SC CDMX",
+      "etapa": "Última milla",
+      "min": 5.5,
+      "q1": 10.3,
+      "median": 16.4,
+      "q3": 21.8,
+      "max": 71.3
+    }
+  ],
+  "heatmap": [
+    {
+      "fecha_dia": "2026-01-01",
+      "destino_site_id": "SME03",
+      "occ": 95.5,
+      "ds": 97.27,
+      "envios": 17
+    },
+    {
+      "fecha_dia": "2026-01-01",
+      "destino_site_id": "SMT01",
+      "occ": 96.72,
+      "ds": 97.45,
+      "envios": 18
+    },
+    {
+      "fecha_dia": "2026-01-01",
+      "destino_site_id": "SMX11",
+      "occ": 87.19,
+      "ds": 97.59,
+      "envios": 10
+    },
+    {
+      "fecha_dia": "2026-01-02",
+      "destino_site_id": "SME03",
+      "occ": 97.81,
+      "ds": 96.32,
+      "envios": 13
+    },
+    {
+      "fecha_dia": "2026-01-02",
+      "destino_site_id": "SMT01",
+      "occ": 93.9,
+      "ds": 95.46,
+      "envios": 13
+    },
+    {
+      "fecha_dia": "2026-01-02",
+      "destino_site_id": "SMX11",
+      "occ": 96.78,
+      "ds": 95.72,
+      "envios": 9
+    },
+    {
+      "fecha_dia": "2026-01-03",
+      "destino_site_id": "SME03",
+      "occ": 86.58,
+      "ds": 93.71,
+      "envios": 10
+    },
+    {
+      "fecha_dia": "2026-01-03",
+      "destino_site_id": "SMT01",
+      "occ": 97.76,
+      "ds": 94.1,
+      "envios": 4
+    },
+    {
+      "fecha_dia": "2026-01-03",
+      "destino_site_id": "SMX11",
+      "occ": 99.13,
+      "ds": 98.07,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-01-04",
+      "destino_site_id": "SME03",
+      "occ": 93.54,
+      "ds": 92.67,
+      "envios": 14
+    },
+    {
+      "fecha_dia": "2026-01-04",
+      "destino_site_id": "SMT01",
+      "occ": 99.32,
+      "ds": 95.61,
+      "envios": 5
+    },
+    {
+      "fecha_dia": "2026-01-04",
+      "destino_site_id": "SMX11",
+      "occ": 93.77,
+      "ds": 92.68,
+      "envios": 10
+    },
+    {
+      "fecha_dia": "2026-01-05",
+      "destino_site_id": "SME03",
+      "occ": 99.32,
+      "ds": 93.32,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-01-05",
+      "destino_site_id": "SMT01",
+      "occ": 97.3,
+      "ds": 95.89,
+      "envios": 13
+    },
+    {
+      "fecha_dia": "2026-01-05",
+      "destino_site_id": "SMX11",
+      "occ": 96.26,
+      "ds": 97.31,
+      "envios": 18
+    },
+    {
+      "fecha_dia": "2026-01-06",
+      "destino_site_id": "SME03",
+      "occ": 96.95,
+      "ds": 93.75,
+      "envios": 10
+    },
+    {
+      "fecha_dia": "2026-01-06",
+      "destino_site_id": "SMT01",
+      "occ": 93.08,
+      "ds": 94.54,
+      "envios": 19
+    },
+    {
+      "fecha_dia": "2026-01-06",
+      "destino_site_id": "SMX11",
+      "occ": 95.68,
+      "ds": 92.21,
+      "envios": 9
+    },
+    {
+      "fecha_dia": "2026-01-07",
+      "destino_site_id": "SME03",
+      "occ": 97.59,
+      "ds": 95.77,
+      "envios": 15
+    },
+    {
+      "fecha_dia": "2026-01-07",
+      "destino_site_id": "SMT01",
+      "occ": 98.61,
+      "ds": 75.82,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-01-07",
+      "destino_site_id": "SMX11",
+      "occ": 93.9,
+      "ds": 98.17,
+      "envios": 15
+    },
+    {
+      "fecha_dia": "2026-01-08",
+      "destino_site_id": "SME03",
+      "occ": 93.91,
+      "ds": 78.67,
+      "envios": 15
+    },
+    {
+      "fecha_dia": "2026-01-08",
+      "destino_site_id": "SMT01",
+      "occ": 98.98,
+      "ds": 96.57,
+      "envios": 8
+    },
+    {
+      "fecha_dia": "2026-01-08",
+      "destino_site_id": "SMX11",
+      "occ": 97.99,
+      "ds": 98.78,
+      "envios": 13
+    },
+    {
+      "fecha_dia": "2026-01-09",
+      "destino_site_id": "SME03",
+      "occ": 75.3,
+      "ds": 98.97,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-01-09",
+      "destino_site_id": "SMT01",
+      "occ": 95.11,
+      "ds": 92.95,
+      "envios": 13
+    },
+    {
+      "fecha_dia": "2026-01-09",
+      "destino_site_id": "SMX11",
+      "occ": 97.14,
+      "ds": 93.35,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-01-10",
+      "destino_site_id": "SME03",
+      "occ": 97.08,
+      "ds": 97.5,
+      "envios": 8
+    },
+    {
+      "fecha_dia": "2026-01-10",
+      "destino_site_id": "SMT01",
+      "occ": 93.62,
+      "ds": 97.4,
+      "envios": 7
+    },
+    {
+      "fecha_dia": "2026-01-10",
+      "destino_site_id": "SMX11",
+      "occ": 95.16,
+      "ds": 95.84,
+      "envios": 14
+    },
+    {
+      "fecha_dia": "2026-01-11",
+      "destino_site_id": "SME03",
+      "occ": 93.15,
+      "ds": 92.6,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-01-11",
+      "destino_site_id": "SMT01",
+      "occ": 93.12,
+      "ds": 96.66,
+      "envios": 7
+    },
+    {
+      "fecha_dia": "2026-01-11",
+      "destino_site_id": "SMX11",
+      "occ": 93.21,
+      "ds": 80.97,
+      "envios": 10
+    },
+    {
+      "fecha_dia": "2026-01-12",
+      "destino_site_id": "SME03",
+      "occ": 99.01,
+      "ds": 94.99,
+      "envios": 9
+    },
+    {
+      "fecha_dia": "2026-01-12",
+      "destino_site_id": "SMT01",
+      "occ": 95.98,
+      "ds": 92.21,
+      "envios": 15
+    },
+    {
+      "fecha_dia": "2026-01-12",
+      "destino_site_id": "SMX11",
+      "occ": 94.14,
+      "ds": 98.89,
+      "envios": 14
+    },
+    {
+      "fecha_dia": "2026-01-13",
+      "destino_site_id": "SME03",
+      "occ": 98.3,
+      "ds": 98.24,
+      "envios": 14
+    },
+    {
+      "fecha_dia": "2026-01-13",
+      "destino_site_id": "SMT01",
+      "occ": 97.26,
+      "ds": 93.85,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-01-13",
+      "destino_site_id": "SMX11",
+      "occ": 96.24,
+      "ds": 95.01,
+      "envios": 7
+    },
+    {
+      "fecha_dia": "2026-01-14",
+      "destino_site_id": "SME03",
+      "occ": 98.54,
+      "ds": 83.71,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-01-14",
+      "destino_site_id": "SMT01",
+      "occ": 95.03,
+      "ds": 97.08,
+      "envios": 17
+    },
+    {
+      "fecha_dia": "2026-01-14",
+      "destino_site_id": "SMX11",
+      "occ": 94.16,
+      "ds": 93.01,
+      "envios": 17
+    },
+    {
+      "fecha_dia": "2026-01-15",
+      "destino_site_id": "SME03",
+      "occ": 93.97,
+      "ds": 93.64,
+      "envios": 9
+    },
+    {
+      "fecha_dia": "2026-01-15",
+      "destino_site_id": "SMT01",
+      "occ": 95.16,
+      "ds": 92.05,
+      "envios": 7
+    },
+    {
+      "fecha_dia": "2026-01-15",
+      "destino_site_id": "SMX11",
+      "occ": 97.07,
+      "ds": 93.43,
+      "envios": 14
+    },
+    {
+      "fecha_dia": "2026-01-16",
+      "destino_site_id": "SME03",
+      "occ": 99.19,
+      "ds": 94.76,
+      "envios": 14
+    },
+    {
+      "fecha_dia": "2026-01-16",
+      "destino_site_id": "SMT01",
+      "occ": 96.19,
+      "ds": 94.87,
+      "envios": 16
+    },
+    {
+      "fecha_dia": "2026-01-16",
+      "destino_site_id": "SMX11",
+      "occ": 97.92,
+      "ds": 97.25,
+      "envios": 15
+    },
+    {
+      "fecha_dia": "2026-01-17",
+      "destino_site_id": "SME03",
+      "occ": 99.39,
+      "ds": 98.69,
+      "envios": 18
+    },
+    {
+      "fecha_dia": "2026-01-17",
+      "destino_site_id": "SMT01",
+      "occ": 98.51,
+      "ds": 96.93,
+      "envios": 7
+    },
+    {
+      "fecha_dia": "2026-01-17",
+      "destino_site_id": "SMX11",
+      "occ": 97.54,
+      "ds": 94.8,
+      "envios": 10
+    },
+    {
+      "fecha_dia": "2026-01-18",
+      "destino_site_id": "SME03",
+      "occ": 97.31,
+      "ds": 96.05,
+      "envios": 18
+    },
+    {
+      "fecha_dia": "2026-01-18",
+      "destino_site_id": "SMT01",
+      "occ": 99.49,
+      "ds": 97.97,
+      "envios": 16
+    },
+    {
+      "fecha_dia": "2026-01-18",
+      "destino_site_id": "SMX11",
+      "occ": 94.75,
+      "ds": 96.36,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-01-19",
+      "destino_site_id": "SME03",
+      "occ": 94.53,
+      "ds": 98.05,
+      "envios": 21
+    },
+    {
+      "fecha_dia": "2026-01-19",
+      "destino_site_id": "SMT01",
+      "occ": 93.24,
+      "ds": 98.82,
+      "envios": 6
+    },
+    {
+      "fecha_dia": "2026-01-19",
+      "destino_site_id": "SMX11",
+      "occ": 96.25,
+      "ds": 95.38,
+      "envios": 10
+    },
+    {
+      "fecha_dia": "2026-01-20",
+      "destino_site_id": "SME03",
+      "occ": 95.81,
+      "ds": 93.77,
+      "envios": 15
+    },
+    {
+      "fecha_dia": "2026-01-20",
+      "destino_site_id": "SMT01",
+      "occ": 95.0,
+      "ds": 94.93,
+      "envios": 13
+    },
+    {
+      "fecha_dia": "2026-01-20",
+      "destino_site_id": "SMX11",
+      "occ": 93.99,
+      "ds": 92.77,
+      "envios": 15
+    },
+    {
+      "fecha_dia": "2026-01-21",
+      "destino_site_id": "SME03",
+      "occ": 97.98,
+      "ds": 92.71,
+      "envios": 18
+    },
+    {
+      "fecha_dia": "2026-01-21",
+      "destino_site_id": "SMT01",
+      "occ": 95.32,
+      "ds": 96.02,
+      "envios": 14
+    },
+    {
+      "fecha_dia": "2026-01-21",
+      "destino_site_id": "SMX11",
+      "occ": 97.29,
+      "ds": 93.93,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-01-22",
+      "destino_site_id": "SME03",
+      "occ": 97.4,
+      "ds": 97.52,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-01-22",
+      "destino_site_id": "SMT01",
+      "occ": 94.27,
+      "ds": 95.85,
+      "envios": 8
+    },
+    {
+      "fecha_dia": "2026-01-22",
+      "destino_site_id": "SMX11",
+      "occ": 93.02,
+      "ds": 96.68,
+      "envios": 10
+    },
+    {
+      "fecha_dia": "2026-01-23",
+      "destino_site_id": "SME03",
+      "occ": 98.63,
+      "ds": 92.13,
+      "envios": 19
+    },
+    {
+      "fecha_dia": "2026-01-23",
+      "destino_site_id": "SMT01",
+      "occ": 98.24,
+      "ds": 97.07,
+      "envios": 14
+    },
+    {
+      "fecha_dia": "2026-01-23",
+      "destino_site_id": "SMX11",
+      "occ": 98.21,
+      "ds": 95.76,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-01-24",
+      "destino_site_id": "SME03",
+      "occ": 94.21,
+      "ds": 98.04,
+      "envios": 8
+    },
+    {
+      "fecha_dia": "2026-01-24",
+      "destino_site_id": "SMT01",
+      "occ": 99.45,
+      "ds": 93.27,
+      "envios": 9
+    },
+    {
+      "fecha_dia": "2026-01-24",
+      "destino_site_id": "SMX11",
+      "occ": 95.02,
+      "ds": 96.6,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-01-25",
+      "destino_site_id": "SME03",
+      "occ": 95.5,
+      "ds": 84.78,
+      "envios": 9
+    },
+    {
+      "fecha_dia": "2026-01-25",
+      "destino_site_id": "SMT01",
+      "occ": 95.02,
+      "ds": 88.24,
+      "envios": 17
+    },
+    {
+      "fecha_dia": "2026-01-25",
+      "destino_site_id": "SMX11",
+      "occ": 96.23,
+      "ds": 92.7,
+      "envios": 14
+    },
+    {
+      "fecha_dia": "2026-01-26",
+      "destino_site_id": "SME03",
+      "occ": 99.1,
+      "ds": 93.47,
+      "envios": 14
+    },
+    {
+      "fecha_dia": "2026-01-26",
+      "destino_site_id": "SMT01",
+      "occ": 93.68,
+      "ds": 95.13,
+      "envios": 17
+    },
+    {
+      "fecha_dia": "2026-01-26",
+      "destino_site_id": "SMX11",
+      "occ": 98.93,
+      "ds": 92.35,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-01-27",
+      "destino_site_id": "SME03",
+      "occ": 98.07,
+      "ds": 92.73,
+      "envios": 16
+    },
+    {
+      "fecha_dia": "2026-01-27",
+      "destino_site_id": "SMT01",
+      "occ": 93.76,
+      "ds": 92.75,
+      "envios": 15
+    },
+    {
+      "fecha_dia": "2026-01-27",
+      "destino_site_id": "SMX11",
+      "occ": 96.83,
+      "ds": 95.27,
+      "envios": 14
+    },
+    {
+      "fecha_dia": "2026-01-28",
+      "destino_site_id": "SME03",
+      "occ": 97.21,
+      "ds": 97.92,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-01-28",
+      "destino_site_id": "SMT01",
+      "occ": 99.03,
+      "ds": 97.32,
+      "envios": 8
+    },
+    {
+      "fecha_dia": "2026-01-28",
+      "destino_site_id": "SMX11",
+      "occ": 79.13,
+      "ds": 97.26,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-01-29",
+      "destino_site_id": "SME03",
+      "occ": 93.15,
+      "ds": 98.46,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-01-29",
+      "destino_site_id": "SMT01",
+      "occ": 72.17,
+      "ds": 94.55,
+      "envios": 16
+    },
+    {
+      "fecha_dia": "2026-01-29",
+      "destino_site_id": "SMX11",
+      "occ": 95.84,
+      "ds": 93.56,
+      "envios": 8
+    },
+    {
+      "fecha_dia": "2026-01-30",
+      "destino_site_id": "SME03",
+      "occ": 93.69,
+      "ds": 92.19,
+      "envios": 9
+    },
+    {
+      "fecha_dia": "2026-01-30",
+      "destino_site_id": "SMT01",
+      "occ": 72.48,
+      "ds": 95.66,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-01-30",
+      "destino_site_id": "SMX11",
+      "occ": 97.94,
+      "ds": 97.01,
+      "envios": 14
+    },
+    {
+      "fecha_dia": "2026-01-31",
+      "destino_site_id": "SME03",
+      "occ": 94.63,
+      "ds": 95.43,
+      "envios": 14
+    },
+    {
+      "fecha_dia": "2026-01-31",
+      "destino_site_id": "SMT01",
+      "occ": 97.0,
+      "ds": 98.83,
+      "envios": 9
+    },
+    {
+      "fecha_dia": "2026-01-31",
+      "destino_site_id": "SMX11",
+      "occ": 97.4,
+      "ds": 98.15,
+      "envios": 7
+    },
+    {
+      "fecha_dia": "2026-02-01",
+      "destino_site_id": "SME03",
+      "occ": 97.38,
+      "ds": 97.01,
+      "envios": 15
+    },
+    {
+      "fecha_dia": "2026-02-01",
+      "destino_site_id": "SMT01",
+      "occ": 95.2,
+      "ds": 93.59,
+      "envios": 10
+    },
+    {
+      "fecha_dia": "2026-02-01",
+      "destino_site_id": "SMX11",
+      "occ": 84.37,
+      "ds": 98.3,
+      "envios": 13
+    },
+    {
+      "fecha_dia": "2026-02-02",
+      "destino_site_id": "SME03",
+      "occ": 99.27,
+      "ds": 93.14,
+      "envios": 14
+    },
+    {
+      "fecha_dia": "2026-02-02",
+      "destino_site_id": "SMT01",
+      "occ": 81.72,
+      "ds": 95.5,
+      "envios": 6
+    },
+    {
+      "fecha_dia": "2026-02-02",
+      "destino_site_id": "SMX11",
+      "occ": 94.91,
+      "ds": 97.59,
+      "envios": 9
+    },
+    {
+      "fecha_dia": "2026-02-03",
+      "destino_site_id": "SME03",
+      "occ": 93.13,
+      "ds": 97.61,
+      "envios": 6
+    },
+    {
+      "fecha_dia": "2026-02-03",
+      "destino_site_id": "SMT01",
+      "occ": 93.25,
+      "ds": 98.95,
+      "envios": 10
+    },
+    {
+      "fecha_dia": "2026-02-03",
+      "destino_site_id": "SMX11",
+      "occ": 96.58,
+      "ds": 97.93,
+      "envios": 10
+    },
+    {
+      "fecha_dia": "2026-02-04",
+      "destino_site_id": "SME03",
+      "occ": 93.92,
+      "ds": 94.25,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-02-04",
+      "destino_site_id": "SMT01",
+      "occ": 95.84,
+      "ds": 96.83,
+      "envios": 8
+    },
+    {
+      "fecha_dia": "2026-02-04",
+      "destino_site_id": "SMX11",
+      "occ": 98.94,
+      "ds": 94.55,
+      "envios": 15
+    },
+    {
+      "fecha_dia": "2026-02-05",
+      "destino_site_id": "SME03",
+      "occ": 97.22,
+      "ds": 97.37,
+      "envios": 13
+    },
+    {
+      "fecha_dia": "2026-02-05",
+      "destino_site_id": "SMT01",
+      "occ": 98.82,
+      "ds": 87.99,
+      "envios": 17
+    },
+    {
+      "fecha_dia": "2026-02-05",
+      "destino_site_id": "SMX11",
+      "occ": 94.41,
+      "ds": 94.55,
+      "envios": 13
+    },
+    {
+      "fecha_dia": "2026-02-06",
+      "destino_site_id": "SME03",
+      "occ": 86.43,
+      "ds": 93.54,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-02-06",
+      "destino_site_id": "SMT01",
+      "occ": 98.52,
+      "ds": 96.92,
+      "envios": 18
+    },
+    {
+      "fecha_dia": "2026-02-06",
+      "destino_site_id": "SMX11",
+      "occ": 98.63,
+      "ds": 96.05,
+      "envios": 9
+    },
+    {
+      "fecha_dia": "2026-02-07",
+      "destino_site_id": "SME03",
+      "occ": 95.37,
+      "ds": 97.65,
+      "envios": 16
+    },
+    {
+      "fecha_dia": "2026-02-07",
+      "destino_site_id": "SMT01",
+      "occ": 96.9,
+      "ds": 97.67,
+      "envios": 15
+    },
+    {
+      "fecha_dia": "2026-02-07",
+      "destino_site_id": "SMX11",
+      "occ": 94.49,
+      "ds": 81.67,
+      "envios": 13
+    },
+    {
+      "fecha_dia": "2026-02-08",
+      "destino_site_id": "SME03",
+      "occ": 93.61,
+      "ds": 94.28,
+      "envios": 13
+    },
+    {
+      "fecha_dia": "2026-02-08",
+      "destino_site_id": "SMT01",
+      "occ": 94.89,
+      "ds": 96.99,
+      "envios": 16
+    },
+    {
+      "fecha_dia": "2026-02-08",
+      "destino_site_id": "SMX11",
+      "occ": 99.08,
+      "ds": 98.04,
+      "envios": 9
+    },
+    {
+      "fecha_dia": "2026-02-09",
+      "destino_site_id": "SME03",
+      "occ": 99.23,
+      "ds": 94.24,
+      "envios": 16
+    },
+    {
+      "fecha_dia": "2026-02-09",
+      "destino_site_id": "SMT01",
+      "occ": 94.79,
+      "ds": 95.49,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-02-09",
+      "destino_site_id": "SMX11",
+      "occ": 96.19,
+      "ds": 97.74,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-02-10",
+      "destino_site_id": "SME03",
+      "occ": 93.87,
+      "ds": 96.15,
+      "envios": 7
+    },
+    {
+      "fecha_dia": "2026-02-10",
+      "destino_site_id": "SMT01",
+      "occ": 97.84,
+      "ds": 98.4,
+      "envios": 10
+    },
+    {
+      "fecha_dia": "2026-02-10",
+      "destino_site_id": "SMX11",
+      "occ": 93.5,
+      "ds": 95.14,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-02-11",
+      "destino_site_id": "SME03",
+      "occ": 94.48,
+      "ds": 94.68,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-02-11",
+      "destino_site_id": "SMT01",
+      "occ": 93.64,
+      "ds": 94.54,
+      "envios": 15
+    },
+    {
+      "fecha_dia": "2026-02-11",
+      "destino_site_id": "SMX11",
+      "occ": 97.16,
+      "ds": 97.34,
+      "envios": 13
+    },
+    {
+      "fecha_dia": "2026-02-12",
+      "destino_site_id": "SME03",
+      "occ": 95.87,
+      "ds": 92.19,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-02-12",
+      "destino_site_id": "SMT01",
+      "occ": 95.83,
+      "ds": 97.17,
+      "envios": 10
+    },
+    {
+      "fecha_dia": "2026-02-12",
+      "destino_site_id": "SMX11",
+      "occ": 95.75,
+      "ds": 95.24,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-02-13",
+      "destino_site_id": "SME03",
+      "occ": 97.7,
+      "ds": 93.52,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-02-13",
+      "destino_site_id": "SMT01",
+      "occ": 96.01,
+      "ds": 94.53,
+      "envios": 6
+    },
+    {
+      "fecha_dia": "2026-02-13",
+      "destino_site_id": "SMX11",
+      "occ": 96.12,
+      "ds": 98.96,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-02-14",
+      "destino_site_id": "SME03",
+      "occ": 80.13,
+      "ds": 93.27,
+      "envios": 10
+    },
+    {
+      "fecha_dia": "2026-02-14",
+      "destino_site_id": "SMT01",
+      "occ": 94.48,
+      "ds": 92.11,
+      "envios": 13
+    },
+    {
+      "fecha_dia": "2026-02-14",
+      "destino_site_id": "SMX11",
+      "occ": 98.34,
+      "ds": 97.88,
+      "envios": 13
+    },
+    {
+      "fecha_dia": "2026-02-15",
+      "destino_site_id": "SME03",
+      "occ": 93.3,
+      "ds": 84.14,
+      "envios": 9
+    },
+    {
+      "fecha_dia": "2026-02-15",
+      "destino_site_id": "SMT01",
+      "occ": 98.01,
+      "ds": 94.76,
+      "envios": 16
+    },
+    {
+      "fecha_dia": "2026-02-15",
+      "destino_site_id": "SMX11",
+      "occ": 98.81,
+      "ds": 93.3,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-02-16",
+      "destino_site_id": "SME03",
+      "occ": 95.61,
+      "ds": 94.92,
+      "envios": 7
+    },
+    {
+      "fecha_dia": "2026-02-16",
+      "destino_site_id": "SMT01",
+      "occ": 95.45,
+      "ds": 86.69,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-02-16",
+      "destino_site_id": "SMX11",
+      "occ": 94.34,
+      "ds": 94.37,
+      "envios": 7
+    },
+    {
+      "fecha_dia": "2026-02-17",
+      "destino_site_id": "SME03",
+      "occ": 98.97,
+      "ds": 95.66,
+      "envios": 8
+    },
+    {
+      "fecha_dia": "2026-02-17",
+      "destino_site_id": "SMT01",
+      "occ": 94.42,
+      "ds": 95.7,
+      "envios": 15
+    },
+    {
+      "fecha_dia": "2026-02-17",
+      "destino_site_id": "SMX11",
+      "occ": 96.95,
+      "ds": 78.69,
+      "envios": 9
+    },
+    {
+      "fecha_dia": "2026-02-18",
+      "destino_site_id": "SME03",
+      "occ": 98.02,
+      "ds": 95.32,
+      "envios": 13
+    },
+    {
+      "fecha_dia": "2026-02-18",
+      "destino_site_id": "SMT01",
+      "occ": 94.15,
+      "ds": 96.86,
+      "envios": 10
+    },
+    {
+      "fecha_dia": "2026-02-18",
+      "destino_site_id": "SMX11",
+      "occ": 79.45,
+      "ds": 94.43,
+      "envios": 18
+    },
+    {
+      "fecha_dia": "2026-02-19",
+      "destino_site_id": "SME03",
+      "occ": 95.09,
+      "ds": 95.15,
+      "envios": 10
+    },
+    {
+      "fecha_dia": "2026-02-19",
+      "destino_site_id": "SMT01",
+      "occ": 99.22,
+      "ds": 94.29,
+      "envios": 13
+    },
+    {
+      "fecha_dia": "2026-02-19",
+      "destino_site_id": "SMX11",
+      "occ": 94.67,
+      "ds": 92.06,
+      "envios": 8
+    },
+    {
+      "fecha_dia": "2026-02-20",
+      "destino_site_id": "SME03",
+      "occ": 96.43,
+      "ds": 93.03,
+      "envios": 10
+    },
+    {
+      "fecha_dia": "2026-02-20",
+      "destino_site_id": "SMT01",
+      "occ": 98.73,
+      "ds": 95.5,
+      "envios": 16
+    },
+    {
+      "fecha_dia": "2026-02-20",
+      "destino_site_id": "SMX11",
+      "occ": 95.84,
+      "ds": 86.64,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-02-21",
+      "destino_site_id": "SME03",
+      "occ": 93.67,
+      "ds": 97.33,
+      "envios": 14
+    },
+    {
+      "fecha_dia": "2026-02-21",
+      "destino_site_id": "SMT01",
+      "occ": 95.62,
+      "ds": 97.86,
+      "envios": 4
+    },
+    {
+      "fecha_dia": "2026-02-21",
+      "destino_site_id": "SMX11",
+      "occ": 93.39,
+      "ds": 93.23,
+      "envios": 16
+    },
+    {
+      "fecha_dia": "2026-02-22",
+      "destino_site_id": "SME03",
+      "occ": 98.74,
+      "ds": 94.6,
+      "envios": 17
+    },
+    {
+      "fecha_dia": "2026-02-22",
+      "destino_site_id": "SMT01",
+      "occ": 97.23,
+      "ds": 95.43,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-02-22",
+      "destino_site_id": "SMX11",
+      "occ": 93.69,
+      "ds": 93.15,
+      "envios": 10
+    },
+    {
+      "fecha_dia": "2026-02-23",
+      "destino_site_id": "SME03",
+      "occ": 94.16,
+      "ds": 92.21,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-02-23",
+      "destino_site_id": "SMT01",
+      "occ": 73.16,
+      "ds": 95.87,
+      "envios": 13
+    },
+    {
+      "fecha_dia": "2026-02-23",
+      "destino_site_id": "SMX11",
+      "occ": 95.76,
+      "ds": 96.05,
+      "envios": 18
+    },
+    {
+      "fecha_dia": "2026-02-24",
+      "destino_site_id": "SME03",
+      "occ": 98.39,
+      "ds": 92.42,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-02-24",
+      "destino_site_id": "SMT01",
+      "occ": 99.25,
+      "ds": 95.98,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-02-24",
+      "destino_site_id": "SMX11",
+      "occ": 99.37,
+      "ds": 93.86,
+      "envios": 8
+    },
+    {
+      "fecha_dia": "2026-02-25",
+      "destino_site_id": "SME03",
+      "occ": 98.06,
+      "ds": 98.22,
+      "envios": 15
+    },
+    {
+      "fecha_dia": "2026-02-25",
+      "destino_site_id": "SMT01",
+      "occ": 95.93,
+      "ds": 98.18,
+      "envios": 10
+    },
+    {
+      "fecha_dia": "2026-02-25",
+      "destino_site_id": "SMX11",
+      "occ": 98.24,
+      "ds": 92.56,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-02-26",
+      "destino_site_id": "SME03",
+      "occ": 93.74,
+      "ds": 97.66,
+      "envios": 10
+    },
+    {
+      "fecha_dia": "2026-02-26",
+      "destino_site_id": "SMT01",
+      "occ": 94.89,
+      "ds": 93.39,
+      "envios": 9
+    },
+    {
+      "fecha_dia": "2026-02-26",
+      "destino_site_id": "SMX11",
+      "occ": 94.19,
+      "ds": 98.42,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-02-27",
+      "destino_site_id": "SME03",
+      "occ": 93.4,
+      "ds": 98.17,
+      "envios": 16
+    },
+    {
+      "fecha_dia": "2026-02-27",
+      "destino_site_id": "SMT01",
+      "occ": 95.88,
+      "ds": 78.11,
+      "envios": 16
+    },
+    {
+      "fecha_dia": "2026-02-27",
+      "destino_site_id": "SMX11",
+      "occ": 96.66,
+      "ds": 97.19,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-02-28",
+      "destino_site_id": "SME03",
+      "occ": 96.21,
+      "ds": 95.79,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-02-28",
+      "destino_site_id": "SMT01",
+      "occ": 99.41,
+      "ds": 94.28,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-02-28",
+      "destino_site_id": "SMX11",
+      "occ": 96.93,
+      "ds": 92.89,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-03-01",
+      "destino_site_id": "SME03",
+      "occ": 95.73,
+      "ds": 94.77,
+      "envios": 7
+    },
+    {
+      "fecha_dia": "2026-03-01",
+      "destino_site_id": "SMT01",
+      "occ": 93.77,
+      "ds": 88.65,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-03-01",
+      "destino_site_id": "SMX11",
+      "occ": 96.66,
+      "ds": 95.0,
+      "envios": 15
+    },
+    {
+      "fecha_dia": "2026-03-02",
+      "destino_site_id": "SME03",
+      "occ": 93.15,
+      "ds": 97.06,
+      "envios": 10
+    },
+    {
+      "fecha_dia": "2026-03-02",
+      "destino_site_id": "SMT01",
+      "occ": 98.61,
+      "ds": 95.87,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-03-02",
+      "destino_site_id": "SMX11",
+      "occ": 96.82,
+      "ds": 93.85,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-03-03",
+      "destino_site_id": "SME03",
+      "occ": 93.67,
+      "ds": 98.72,
+      "envios": 10
+    },
+    {
+      "fecha_dia": "2026-03-03",
+      "destino_site_id": "SMT01",
+      "occ": 94.96,
+      "ds": 92.02,
+      "envios": 8
+    },
+    {
+      "fecha_dia": "2026-03-03",
+      "destino_site_id": "SMX11",
+      "occ": 70.8,
+      "ds": 85.01,
+      "envios": 8
+    },
+    {
+      "fecha_dia": "2026-03-04",
+      "destino_site_id": "SME03",
+      "occ": 96.72,
+      "ds": 92.24,
+      "envios": 8
+    },
+    {
+      "fecha_dia": "2026-03-04",
+      "destino_site_id": "SMT01",
+      "occ": 94.08,
+      "ds": 97.4,
+      "envios": 7
+    },
+    {
+      "fecha_dia": "2026-03-04",
+      "destino_site_id": "SMX11",
+      "occ": 99.14,
+      "ds": 78.63,
+      "envios": 17
+    },
+    {
+      "fecha_dia": "2026-03-05",
+      "destino_site_id": "SME03",
+      "occ": 98.23,
+      "ds": 94.41,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-03-05",
+      "destino_site_id": "SMT01",
+      "occ": 95.27,
+      "ds": 77.35,
+      "envios": 18
+    },
+    {
+      "fecha_dia": "2026-03-05",
+      "destino_site_id": "SMX11",
+      "occ": 95.32,
+      "ds": 92.29,
+      "envios": 8
+    },
+    {
+      "fecha_dia": "2026-03-06",
+      "destino_site_id": "SME03",
+      "occ": 96.28,
+      "ds": 95.88,
+      "envios": 16
+    },
+    {
+      "fecha_dia": "2026-03-06",
+      "destino_site_id": "SMT01",
+      "occ": 98.75,
+      "ds": 93.58,
+      "envios": 7
+    },
+    {
+      "fecha_dia": "2026-03-06",
+      "destino_site_id": "SMX11",
+      "occ": 97.67,
+      "ds": 98.28,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-03-07",
+      "destino_site_id": "SME03",
+      "occ": 95.77,
+      "ds": 92.05,
+      "envios": 15
+    },
+    {
+      "fecha_dia": "2026-03-07",
+      "destino_site_id": "SMT01",
+      "occ": 94.35,
+      "ds": 93.36,
+      "envios": 7
+    },
+    {
+      "fecha_dia": "2026-03-07",
+      "destino_site_id": "SMX11",
+      "occ": 94.05,
+      "ds": 97.95,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-03-08",
+      "destino_site_id": "SME03",
+      "occ": 98.72,
+      "ds": 92.4,
+      "envios": 8
+    },
+    {
+      "fecha_dia": "2026-03-08",
+      "destino_site_id": "SMT01",
+      "occ": 97.85,
+      "ds": 95.77,
+      "envios": 8
+    },
+    {
+      "fecha_dia": "2026-03-08",
+      "destino_site_id": "SMX11",
+      "occ": 98.41,
+      "ds": 97.52,
+      "envios": 9
+    },
+    {
+      "fecha_dia": "2026-03-09",
+      "destino_site_id": "SME03",
+      "occ": 94.29,
+      "ds": 95.37,
+      "envios": 15
+    },
+    {
+      "fecha_dia": "2026-03-09",
+      "destino_site_id": "SMT01",
+      "occ": 95.55,
+      "ds": 98.35,
+      "envios": 15
+    },
+    {
+      "fecha_dia": "2026-03-09",
+      "destino_site_id": "SMX11",
+      "occ": 99.18,
+      "ds": 92.83,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-03-10",
+      "destino_site_id": "SME03",
+      "occ": 95.22,
+      "ds": 98.9,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-03-10",
+      "destino_site_id": "SMT01",
+      "occ": 94.04,
+      "ds": 98.34,
+      "envios": 19
+    },
+    {
+      "fecha_dia": "2026-03-10",
+      "destino_site_id": "SMX11",
+      "occ": 98.64,
+      "ds": 96.49,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-03-11",
+      "destino_site_id": "SME03",
+      "occ": 94.78,
+      "ds": 94.23,
+      "envios": 10
+    },
+    {
+      "fecha_dia": "2026-03-11",
+      "destino_site_id": "SMT01",
+      "occ": 95.57,
+      "ds": 92.53,
+      "envios": 10
+    },
+    {
+      "fecha_dia": "2026-03-11",
+      "destino_site_id": "SMX11",
+      "occ": 94.51,
+      "ds": 94.81,
+      "envios": 6
+    },
+    {
+      "fecha_dia": "2026-03-12",
+      "destino_site_id": "SME03",
+      "occ": 97.98,
+      "ds": 92.19,
+      "envios": 6
+    },
+    {
+      "fecha_dia": "2026-03-12",
+      "destino_site_id": "SMT01",
+      "occ": 98.97,
+      "ds": 93.76,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-03-12",
+      "destino_site_id": "SMX11",
+      "occ": 97.56,
+      "ds": 98.23,
+      "envios": 10
+    },
+    {
+      "fecha_dia": "2026-03-13",
+      "destino_site_id": "SME03",
+      "occ": 98.59,
+      "ds": 94.48,
+      "envios": 13
+    },
+    {
+      "fecha_dia": "2026-03-13",
+      "destino_site_id": "SMT01",
+      "occ": 97.82,
+      "ds": 95.73,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-03-13",
+      "destino_site_id": "SMX11",
+      "occ": 94.76,
+      "ds": 84.68,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-03-14",
+      "destino_site_id": "SME03",
+      "occ": 98.96,
+      "ds": 95.23,
+      "envios": 10
+    },
+    {
+      "fecha_dia": "2026-03-14",
+      "destino_site_id": "SMT01",
+      "occ": 97.68,
+      "ds": 92.98,
+      "envios": 13
+    },
+    {
+      "fecha_dia": "2026-03-14",
+      "destino_site_id": "SMX11",
+      "occ": 94.55,
+      "ds": 97.89,
+      "envios": 7
+    },
+    {
+      "fecha_dia": "2026-03-15",
+      "destino_site_id": "SME03",
+      "occ": 94.65,
+      "ds": 97.59,
+      "envios": 9
+    },
+    {
+      "fecha_dia": "2026-03-15",
+      "destino_site_id": "SMT01",
+      "occ": 99.33,
+      "ds": 94.62,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-03-15",
+      "destino_site_id": "SMX11",
+      "occ": 94.0,
+      "ds": 92.65,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-03-16",
+      "destino_site_id": "SME03",
+      "occ": 97.12,
+      "ds": 97.81,
+      "envios": 8
+    },
+    {
+      "fecha_dia": "2026-03-16",
+      "destino_site_id": "SMT01",
+      "occ": 98.14,
+      "ds": 96.13,
+      "envios": 9
+    },
+    {
+      "fecha_dia": "2026-03-16",
+      "destino_site_id": "SMX11",
+      "occ": 94.97,
+      "ds": 95.8,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-03-17",
+      "destino_site_id": "SME03",
+      "occ": 97.66,
+      "ds": 96.66,
+      "envios": 14
+    },
+    {
+      "fecha_dia": "2026-03-17",
+      "destino_site_id": "SMT01",
+      "occ": 94.52,
+      "ds": 93.19,
+      "envios": 20
+    },
+    {
+      "fecha_dia": "2026-03-17",
+      "destino_site_id": "SMX11",
+      "occ": 95.3,
+      "ds": 79.76,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-03-18",
+      "destino_site_id": "SME03",
+      "occ": 99.32,
+      "ds": 94.24,
+      "envios": 7
+    },
+    {
+      "fecha_dia": "2026-03-18",
+      "destino_site_id": "SMT01",
+      "occ": 98.74,
+      "ds": 94.33,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-03-18",
+      "destino_site_id": "SMX11",
+      "occ": 97.78,
+      "ds": 95.71,
+      "envios": 21
+    },
+    {
+      "fecha_dia": "2026-03-19",
+      "destino_site_id": "SME03",
+      "occ": 94.41,
+      "ds": 97.46,
+      "envios": 9
+    },
+    {
+      "fecha_dia": "2026-03-19",
+      "destino_site_id": "SMT01",
+      "occ": 79.14,
+      "ds": 97.52,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-03-19",
+      "destino_site_id": "SMX11",
+      "occ": 93.81,
+      "ds": 96.09,
+      "envios": 6
+    },
+    {
+      "fecha_dia": "2026-03-20",
+      "destino_site_id": "SME03",
+      "occ": 95.29,
+      "ds": 97.57,
+      "envios": 15
+    },
+    {
+      "fecha_dia": "2026-03-20",
+      "destino_site_id": "SMT01",
+      "occ": 93.52,
+      "ds": 96.1,
+      "envios": 14
+    },
+    {
+      "fecha_dia": "2026-03-20",
+      "destino_site_id": "SMX11",
+      "occ": 94.19,
+      "ds": 94.45,
+      "envios": 14
+    },
+    {
+      "fecha_dia": "2026-03-21",
+      "destino_site_id": "SME03",
+      "occ": 93.59,
+      "ds": 98.62,
+      "envios": 7
+    },
+    {
+      "fecha_dia": "2026-03-21",
+      "destino_site_id": "SMT01",
+      "occ": 97.92,
+      "ds": 98.92,
+      "envios": 14
+    },
+    {
+      "fecha_dia": "2026-03-21",
+      "destino_site_id": "SMX11",
+      "occ": 94.23,
+      "ds": 97.32,
+      "envios": 8
+    },
+    {
+      "fecha_dia": "2026-03-22",
+      "destino_site_id": "SME03",
+      "occ": 98.4,
+      "ds": 95.1,
+      "envios": 15
+    },
+    {
+      "fecha_dia": "2026-03-22",
+      "destino_site_id": "SMT01",
+      "occ": 94.78,
+      "ds": 94.01,
+      "envios": 15
+    },
+    {
+      "fecha_dia": "2026-03-22",
+      "destino_site_id": "SMX11",
+      "occ": 98.12,
+      "ds": 96.24,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-03-23",
+      "destino_site_id": "SME03",
+      "occ": 97.21,
+      "ds": 85.32,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-03-23",
+      "destino_site_id": "SMT01",
+      "occ": 94.7,
+      "ds": 97.82,
+      "envios": 10
+    },
+    {
+      "fecha_dia": "2026-03-23",
+      "destino_site_id": "SMX11",
+      "occ": 99.26,
+      "ds": 86.7,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-03-24",
+      "destino_site_id": "SME03",
+      "occ": 93.56,
+      "ds": 75.65,
+      "envios": 9
+    },
+    {
+      "fecha_dia": "2026-03-24",
+      "destino_site_id": "SMT01",
+      "occ": 93.55,
+      "ds": 93.54,
+      "envios": 18
+    },
+    {
+      "fecha_dia": "2026-03-24",
+      "destino_site_id": "SMX11",
+      "occ": 97.02,
+      "ds": 92.94,
+      "envios": 17
+    },
+    {
+      "fecha_dia": "2026-03-25",
+      "destino_site_id": "SME03",
+      "occ": 87.56,
+      "ds": 97.82,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-03-25",
+      "destino_site_id": "SMT01",
+      "occ": 99.27,
+      "ds": 98.52,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-03-25",
+      "destino_site_id": "SMX11",
+      "occ": 93.24,
+      "ds": 94.8,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-03-26",
+      "destino_site_id": "SME03",
+      "occ": 94.76,
+      "ds": 92.63,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-03-26",
+      "destino_site_id": "SMT01",
+      "occ": 95.54,
+      "ds": 93.53,
+      "envios": 13
+    },
+    {
+      "fecha_dia": "2026-03-26",
+      "destino_site_id": "SMX11",
+      "occ": 93.07,
+      "ds": 96.01,
+      "envios": 8
+    },
+    {
+      "fecha_dia": "2026-03-27",
+      "destino_site_id": "SME03",
+      "occ": 94.84,
+      "ds": 92.65,
+      "envios": 16
+    },
+    {
+      "fecha_dia": "2026-03-27",
+      "destino_site_id": "SMT01",
+      "occ": 98.57,
+      "ds": 96.71,
+      "envios": 7
+    },
+    {
+      "fecha_dia": "2026-03-27",
+      "destino_site_id": "SMX11",
+      "occ": 86.86,
+      "ds": 94.87,
+      "envios": 7
+    },
+    {
+      "fecha_dia": "2026-03-28",
+      "destino_site_id": "SME03",
+      "occ": 96.05,
+      "ds": 98.26,
+      "envios": 9
+    },
+    {
+      "fecha_dia": "2026-03-28",
+      "destino_site_id": "SMT01",
+      "occ": 94.3,
+      "ds": 92.69,
+      "envios": 9
+    },
+    {
+      "fecha_dia": "2026-03-28",
+      "destino_site_id": "SMX11",
+      "occ": 94.87,
+      "ds": 98.41,
+      "envios": 17
+    },
+    {
+      "fecha_dia": "2026-03-29",
+      "destino_site_id": "SME03",
+      "occ": 95.79,
+      "ds": 92.49,
+      "envios": 8
+    },
+    {
+      "fecha_dia": "2026-03-29",
+      "destino_site_id": "SMT01",
+      "occ": 85.46,
+      "ds": 98.43,
+      "envios": 10
+    },
+    {
+      "fecha_dia": "2026-03-29",
+      "destino_site_id": "SMX11",
+      "occ": 94.63,
+      "ds": 78.88,
+      "envios": 12
+    },
+    {
+      "fecha_dia": "2026-03-30",
+      "destino_site_id": "SME03",
+      "occ": 94.19,
+      "ds": 98.18,
+      "envios": 11
+    },
+    {
+      "fecha_dia": "2026-03-30",
+      "destino_site_id": "SMT01",
+      "occ": 96.33,
+      "ds": 95.09,
+      "envios": 15
+    },
+    {
+      "fecha_dia": "2026-03-30",
+      "destino_site_id": "SMX11",
+      "occ": 96.21,
+      "ds": 96.31,
+      "envios": 19
+    },
+    {
+      "fecha_dia": "2026-03-31",
+      "destino_site_id": "SME03",
+      "occ": 95.53,
+      "ds": 93.79,
+      "envios": 15
+    },
+    {
+      "fecha_dia": "2026-03-31",
+      "destino_site_id": "SMT01",
+      "occ": 78.93,
+      "ds": 97.4,
+      "envios": 19
+    },
+    {
+      "fecha_dia": "2026-03-31",
+      "destino_site_id": "SMX11",
+      "occ": 95.24,
+      "ds": 97.47,
+      "envios": 10
+    }
+  ],
+  "fechas_dobles": {
+    "envios_22": 29,
+    "envios_33": 26,
+    "total_dobles": 55,
+    "dist_dobles": {
+      "early": 70.9,
+      "ontime": 12.7,
+      "delayed": 16.4
+    },
+    "dist_resto": {
+      "early": 81.9,
+      "ontime": 10.0,
+      "delayed": 8.1
+    },
+    "tiempos": {
+      "preparacion": {
+        "dobles": 7.8,
+        "resto": 8.0
+      },
+      "linehaul": {
+        "dobles": 14.7,
+        "resto": 13.5
+      },
+      "ultima_milla": {
+        "dobles": 26.9,
+        "resto": 21.4
+      },
+      "total": {
+        "dobles": 49.4,
+        "resto": 42.8
+      }
+    },
+    "detalle_por_destino": [
+      {
+        "fecha": "2026-02-02",
+        "sc": "SC Merida",
+        "envios": 14,
+        "t_ultima_milla_h": 22.9,
+        "pct_early": 85.7,
+        "pct_delayed": 7.1
+      },
+      {
+        "fecha": "2026-02-02",
+        "sc": "SC Monterrey",
+        "envios": 6,
+        "t_ultima_milla_h": 29.5,
+        "pct_early": 66.7,
+        "pct_delayed": 16.7
+      },
+      {
+        "fecha": "2026-02-02",
+        "sc": "SC CDMX",
+        "envios": 9,
+        "t_ultima_milla_h": 30.7,
+        "pct_early": 44.4,
+        "pct_delayed": 33.3
+      },
+      {
+        "fecha": "2026-03-03",
+        "sc": "SC Merida",
+        "envios": 10,
+        "t_ultima_milla_h": 22.3,
+        "pct_early": 80.0,
+        "pct_delayed": 0.0
+      },
+      {
+        "fecha": "2026-03-03",
+        "sc": "SC Monterrey",
+        "envios": 8,
+        "t_ultima_milla_h": 18.0,
+        "pct_early": 87.5,
+        "pct_delayed": 0.0
+      },
+      {
+        "fecha": "2026-03-03",
+        "sc": "SC CDMX",
+        "envios": 8,
+        "t_ultima_milla_h": 42.1,
+        "pct_early": 50.0,
+        "pct_delayed": 50.0
+      }
+    ]
+  }
+}
