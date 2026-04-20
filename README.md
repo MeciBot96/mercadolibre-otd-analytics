@@ -148,8 +148,6 @@ Tablero interactivo con paleta de marca Mercado Libre. Carga `dashboard_data.jso
 
 ## Autor
 
-**Isaac** — Senior Data Analyst candidate · Mercado Libre México · 2026
-
-## License
+**Isaac Mecinas** — Senior Data Analyst candidate · Mercado Libre México · 2026
 
 MIT
